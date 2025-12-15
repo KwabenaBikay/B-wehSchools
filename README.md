@@ -2,7 +2,7 @@
 
 A modern, professional, and secure website for B-Weh Schools Montessori built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## 🎯 Features
+## Features
 
 ### Frontend
 - **Home Page** - Hero section with image slider, highlights, and video section
@@ -18,16 +18,16 @@ A modern, professional, and secure website for B-Weh Schools Montessori built wi
 - **Modern UI** - Professional design with violet and white color scheme
 
 ### Backend & Security
-- ✅ **Secure Contact Form API** - Full validation, rate limiting, spam protection
-- ✅ **Email Integration** - Resend & SMTP support
-- ✅ **Security Headers** - Comprehensive security headers configured
-- ✅ **Content Security Policy** - XSS protection
-- ✅ **Input Validation** - Zod schema validation
-- ✅ **Rate Limiting** - Prevents spam and DoS attacks
-- ✅ **Honeypot Protection** - Bot detection
-- ✅ **Bwexus Integration** - Ready for future unified platform integration
+- **Secure Contact Form API** - Full validation, rate limiting, spam protection
+- **Email Integration** - Resend & SMTP support
+- **Security Headers** - Comprehensive security headers configured
+- **Content Security Policy** - XSS protection
+- **Input Validation** - Zod schema validation
+- **Rate Limiting** - Prevents spam and DoS attacks
+- **Honeypot Protection** - Bot detection
+- **Bwexus Integration** - Ready for future unified platform integration
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -60,7 +60,7 @@ npm run dev
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 BWehSchoolsnew/
@@ -94,7 +94,7 @@ BWehSchoolsnew/
 └── documentation/        # Project documentation
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -128,19 +128,19 @@ BWEXUS_API_KEY=your-key-here
 **Phone:** +233 54 975 3104  
 **Address:** Windy Ridge, CP, Kasoa, Ghana
 
-## 🔒 Security Features
+## Security Features
 
-- ✅ Security headers (HSTS, X-Frame-Options, CSP, etc.)
-- ✅ Content Security Policy (CSP)
-- ✅ Input validation and sanitization
-- ✅ Rate limiting (5 requests per 15 minutes)
-- ✅ Honeypot spam protection
-- ✅ Secure external links (`rel="noopener noreferrer"`)
-- ✅ URL validation for YouTube embeds
-- ✅ No XSS vulnerabilities
-- ✅ No dependency vulnerabilities
+- Security headers (HSTS, X-Frame-Options, CSP, etc.)
+- Content Security Policy (CSP)
+- Input validation and sanitization
+- Rate limiting (5 requests per 15 minutes)
+- Honeypot spam protection
+- Secure external links (`rel="noopener noreferrer"`)
+- URL validation for YouTube embeds
+- No XSS vulnerabilities
+- No dependency vulnerabilities
 
-## 🛠️ Available Scripts
+## Available Scripts
 
 ```bash
 # Development
@@ -154,7 +154,7 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
 
-## 📧 Contact Form API
+## Contact Form API
 
 ### Endpoint
 `POST /api/contact`
@@ -184,7 +184,7 @@ npm run lint         # Run ESLint
 - Email notifications
 - Error handling
 
-## 🔗 Integration
+## Integration
 
 ### Bwexus Platform Integration
 
@@ -197,14 +197,14 @@ BWEXUS_API_URL=https://api.bwexus.com
 BWEXUS_API_KEY=your-key
 ```
 
-## 🏗️ Build for Production
+## Build for Production
 
 ```bash
 npm run build
 npm start
 ```
 
-## 🚀 Deployment
+## Deployment
 
 This project is ready to deploy on:
 
@@ -230,7 +230,7 @@ This project is ready to deploy on:
 - [ ] Test all pages
 - [ ] Verify images load correctly
 
-## 🧪 Testing
+## Testing
 
 ### Run Automated Tests
 ```bash
@@ -244,7 +244,7 @@ This project is ready to deploy on:
 4. Check all pages load
 5. Verify mobile responsiveness
 
-## 📚 Documentation
+## Documentation
 
 See the `documentation/` folder for detailed documentation:
 - `SECURITY_AUDIT.md` - Security audit report
@@ -252,7 +252,7 @@ See the `documentation/` folder for detailed documentation:
 - `API_INTEGRATION.md` - Bwexus integration guide
 - `PRODUCTION_READY.md` - Production deployment guide
 
-## 🛡️ Security
+## Security
 
 This project follows security best practices:
 - All security headers configured
@@ -263,7 +263,7 @@ This project follows security best practices:
 - No hardcoded secrets
 - Regular dependency updates
 
-## 🔄 Customization
+## Customization
 
 ### Update School Information
 
@@ -274,7 +274,7 @@ This project follows security best practices:
 5. **YouTube Video**: Edit `app/page.tsx` - `YOUTUBE_EMBED_URL`
 6. **School Portal URL**: Edit `components/Navbar.tsx` and `components/Footer.tsx`
 
-## 📦 Technologies Used
+## Technologies Used
 
 - **Next.js 14** - React framework with App Router
 - **React 18** - UI library
@@ -284,22 +284,22 @@ This project follows security best practices:
 - **Resend** - Email service (optional)
 - **Nodemailer** - SMTP email (optional)
 
-## 📝 License
+## License
 
 © 2025 B-Weh Schools Montessori. All rights reserved.
 
-## 👥 Contributors
+## Contributors
 
 - **KwabenaBikay** - Repository owner
 - **malike2356** - Collaborator
 
-## 📞 Support
+## Support
 
 For issues or questions:
 - **Email:** bwehschools@gmail.com
 - **Phone:** +233 54 975 3104
 
-## 🔗 Links
+## Links
 
 - **School Portal:** https://sms.bwehschools.com/login
 - **GitHub Repository:** https://github.com/KwabenaBikay/B-WehSchools
@@ -308,4 +308,4 @@ For issues or questions:
 
 **Last Updated:** December 15, 2025  
 **Version:** 1.0.0  
-**Status:** ✅ Production Ready
+**Status:** Production Ready
