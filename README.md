@@ -89,9 +89,8 @@ BWehSchoolsnew/
 │   ├── env.ts            # Environment validation
 │   ├── logger.ts         # Logging utility
 │   └── rateLimit.ts      # Rate limiting
-├── public/               # Static assets
-│   └── images/           # Image assets
-└── documentation/        # Project documentation
+└── public/               # Static assets
+    └── images/           # Image assets
 ```
 
 ## Configuration
@@ -243,14 +242,6 @@ This project is ready to deploy on:
 3. Test rate limiting
 4. Check all pages load
 5. Verify mobile responsiveness
-
-## Documentation
-
-See the `documentation/` folder for detailed documentation:
-- `SECURITY_AUDIT.md` - Security audit report
-- `BACKEND_RECOMMENDATIONS.md` - Backend implementation guide
-- `API_INTEGRATION.md` - Bwexus integration guide
-- `PRODUCTION_READY.md` - Production deployment guide
 
 ## Security
 
