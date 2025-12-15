@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 
-// --- UPDATED DATA WITH YOUR LOCAL IMAGES ---
+// --- DATA WITH LOCAL IMAGES ---
 const BLOG_POSTS = [
    {
     id: 1,

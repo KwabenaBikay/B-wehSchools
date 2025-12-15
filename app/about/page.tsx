@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    // This pushes the content down below the fixed navbar.
+    // Pushes the content down below the fixed navbar.
     <div className="min-h-screen bg-white pt-40 pb-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">

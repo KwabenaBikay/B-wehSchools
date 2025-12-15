@@ -5,7 +5,7 @@ import { FaLinkedinIn, FaInstagram, FaTiktok, FaFacebookF, FaYoutube, FaWhatsapp
 
 export default function Footer() {
   return (
-    // CHANGED: Background to the specific Red-Purple from your image (#7e1b84)
+    // Background to the specific Red-Purple from your image (#7e1b84)
     <footer className="bg-[#7e1b84] text-white pt-20 pb-10 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-8">

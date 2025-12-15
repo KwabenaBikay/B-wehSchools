@@ -20,7 +20,7 @@ export const BLOG_POSTS = [
     excerpt: 'Secure your child’s spot in our Montessori program. Learn about the new application process.',
     date: 'Nov 20, 2025',
     category: 'Admissions',
-    image: '/images/blog/admissions.jpg', // Updated to local image
+    image: '/images/blog/admissions.jpg', 
     slug: 'admissions-2026'
   },
   {
@@ -29,7 +29,7 @@ export const BLOG_POSTS = [
     excerpt: 'Why our curriculum emphasizes guided play as a critical component of cognitive development.',
     date: 'Nov 15, 2025',
     category: 'Education',
-    image: '/images/blog/play-time.jpg', // Updated to local image
+    image: '/images/blog/play-time.jpg', 
     slug: 'importance-of-play'
   },
 ];

@@ -51,7 +51,7 @@ export default function SinglePostPage({ params }: { params: { slug: string } })
           {post.excerpt}
         </p>
 
-        {/* Dummy Body Content (Since we don't have real full text yet) */}
+        {/* Dummy Body Content (Yet to add the rest) */}
         <div className="prose prose-lg prose-purple text-gray-600">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

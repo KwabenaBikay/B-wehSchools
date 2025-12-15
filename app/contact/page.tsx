@@ -27,7 +27,7 @@ export default function ContactPage() {
   };
 
   return (
-    // UPDATED: Added 'min-h-screen' and changed top padding to 'pt-40'
+    // 'min-h-screen' and changed top padding to 'pt-40'
     <div className="min-h-screen bg-white pt-40 pb-16">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">

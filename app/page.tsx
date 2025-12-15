@@ -6,7 +6,7 @@ import Link from 'next/link';
 import VideoSection from '@/components/VideoSection';
 import BlogSection from '@/components/BlogSection';
 import TestimonialSection from '@/components/TestimonialSection';
-import WhyBwehSection from '@/components/WhyBwehSection'; // Ensure this is imported
+import WhyBwehSection from '@/components/WhyBwehSection'; // Ensures this is imported
 
 // --- HERO DATA ---
 const HERO_SLIDES = [
@@ -27,7 +27,7 @@ const HERO_BULLETS = [
   'STEM, music, arts, and leadership clubs',
 ];
 
-// NOTE: HIGHLIGHTS data has been removed because WhyBwehSection replaces it.
+// --- YOUTUBE EMBED URL ---
 
 const YOUTUBE_EMBED_URL = 'https://www.youtube.com/watch?v=TWuat0DqTiU';
 

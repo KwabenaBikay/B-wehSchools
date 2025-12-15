@@ -40,7 +40,7 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-fuchsia-50 pt-32 pb-20">
-      {/* Added global styles strictly for the Masonry layout gutters */}
+      {/* global styles strictly for the Masonry layout gutters */}
       <style jsx global>{`
         .my-masonry-grid {
           display: flex;

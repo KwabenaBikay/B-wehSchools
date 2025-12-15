@@ -29,7 +29,7 @@ const SPOTLIGHT_ITEMS = [
     title: 'Sunset over the Savannah',
     student: 'Ama Osei',
     grade: 'Basic 2',
-    // Added more art images so arrows appear
+    //  more art images so arrows appear
     images: [
         'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80',
         'https://images.unsplash.com/photo-1560421683-6856ea585c78?w=800&q=80',
@@ -56,7 +56,7 @@ const SPOTLIGHT_ITEMS = [
     title: 'Hydraulic Arm Project',
     student: 'Robotics Club Team',
     grade: 'KG2',
-    // Added more science images
+    // more science images
     images: [
         'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
         'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80',
@@ -72,7 +72,7 @@ const SPOTLIGHT_ITEMS = [
     title: 'Best Speller 2024',
     student: 'Emmanuel Darko',
     grade: 'Nursery1',
-    // Added more spelling bee images
+    // more spelling bee images
     images: [
         'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80',
         'https://images.unsplash.com/photo-1427504746696-277666db6992?w=800&q=80'
@@ -87,7 +87,7 @@ const SPOTLIGHT_ITEMS = [
     title: 'Recycled Sculpture',
     student: 'Creative Arts Class',
     grade: 'Nursery 2',
-    // Added more sculpture images
+    // more sculpture images
     images: [
         'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&q=80',
         'https://images.unsplash.com/photo-1551590192-807e80d75d45?w=800&q=80'
