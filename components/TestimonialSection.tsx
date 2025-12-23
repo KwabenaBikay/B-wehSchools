@@ -7,15 +7,15 @@ const TESTIMONIALS = [
   {
     id: 1,
     name: "Mrs. Jennifer Opare",
-    role: "Parent, Grade 3",
+    role: "Parent, Nursery 1",
     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80", // Replace with real parent image
     text: "The transformation in my son's confidence since joining B-Weh has been remarkable. The personalized attention he gets in the Montessori system is exactly what he needed.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Mr. Kwesi Boateng",
-    role: "Parent, Preschool",
+    name: "Mr. Bandari Thomas",
+    role: "Parent, Grade 1",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
     text: "I was worried about my daughter's transition to school, but the teachers here are so nurturing. She wakes up every morning excited to go to school. Best decision we made!",
     rating: 5,
@@ -23,7 +23,7 @@ const TESTIMONIALS = [
   {
     id: 3,
     name: "Dr. & Mrs. Mensah",
-    role: "Parents, JHS 1",
+    role: "Parents, KG 2",
     image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80",
     text: "The balance between strict academic standards and creative extracurriculars like Robotics is impressive. B-Weh is truly preparing children for the modern world.",
     rating: 5,
