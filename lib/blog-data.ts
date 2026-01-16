@@ -16,7 +16,7 @@ export const BLOG_POSTS = [
     date: 'Nov 20, 2025',
     category: 'Art and Exhibition',
     image: '/images/blog/blog1.jpg', 
-    slug: 'art and exhibition'
+    slug: 'art-and-exhibition'
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const BLOG_POSTS = [
     date: 'Nov 15, 2025',
     category: 'Robotics & AI',
     image: '/images/blog/blog10.jpg', 
-    slug: 'Robotics and AI'
+    slug: 'robotics-and-ai'
   },
 ];
 
