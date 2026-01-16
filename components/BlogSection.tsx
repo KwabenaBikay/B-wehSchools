@@ -4,20 +4,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 
-// --- THE FIX IS HERE ---
-//import it from your data file.
-// path points to where the created blog-data.ts
+// 1. IMPORT THE DATA
 import { BLOG_POSTS } from '@/app/blog/blog-data'; 
 
 export default function BlogSection() {
-  //show the first 3 posts on the homepage
-  const recentPosts = BLOG_POSTS.slice(0, 3);
-
   return (
     <section className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        {/* --- SECTION HEADER --- */}
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-sm font-bold uppercase tracking-wider text-fuchsia-500">
             School Updates
@@ -30,14 +25,15 @@ export default function BlogSection() {
           </p>
         </div>
 
-        {/* --- BLOG GRID --- */}
+        {/* Blog Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {recentPosts.map((post) => (
+          {/* We map through the IMPORTED data now */}
+          {BLOG_POSTS.map((post) => (
             <article 
               key={post.id} 
               className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 border border-transparent hover:border-fuchsia-100"
             >
-              {/* IMAGE WRAPPER */}
+              {/* Image */}
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
                   src={post.image}
@@ -45,13 +41,12 @@ export default function BlogSection() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                {/* Category Badge */}
                 <div className="absolute top-4 left-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#7e1b84] shadow-sm backdrop-blur-sm">
                   {post.category}
                 </div>
               </div>
 
-              {/* CONTENT */}
+              {/* Content */}
               <div className="flex flex-1 flex-col p-6">
                 <div className="mb-3 flex items-center gap-2 text-xs font-medium text-gray-500">
                   <FaCalendarAlt className="text-fuchsia-400" />
@@ -81,7 +76,7 @@ export default function BlogSection() {
           ))}
         </div>
 
-        {/* --- VIEW ALL BUTTON --- */}
+        {/* View All Button */}
         <div className="mt-16 text-center">
           <Link
             href="/blog"
