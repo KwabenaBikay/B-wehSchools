@@ -7,30 +7,39 @@ import { FaCalendarAlt, FaArrowRight } from 'react-icons/fa';
 export const BLOG_POSTS = [
   {
     id: 1,
-    title: 'B-Weh Schools Wins Regional Debate Competition',
-    excerpt: 'Our diligent students showcased exceptional public speaking skills to take home the trophy.',
+    title: 'Sports Week-Nursery Class Crowned Overall Winners',
+    excerpt: 'After a week-long contest among the various classes of B-Weh Schools Montessori, the Nursery Class emerged as the overall champions. Their teamwork, enthusiasm, and determination made this year’s Sports Week truly memorable.',
     date: 'Dec 01, 2025',
-    category: 'Achievements',
-    image: '/images/blog/debate-win.jpg', // Updated to local image
-    slug: 'regional-debate-win'
+    category: 'Sports',
+    image: '/images/blog/blog0.jpg',
+    slug: 'sports-week'
   },
   {
     id: 2,
-    title: 'Admissions Open for the 2026 Academic Year',
-    excerpt: 'Secure your child’s spot in our Montessori program. Learn about the new application process.',
+    title: 'Our Art & Exhibition Day and NPT',
+    excerpt: 'As part of our commitment to nurturing creativity and holistic development, we hosted our maiden Art and Exhibition Day. The event provided a platform for our learners to showcase their impressive artworks and express their talents with confidence.',
     date: 'Nov 20, 2025',
-    category: 'Admissions',
-    image: '/images/blog/admissions.jpg', 
-    slug: 'admissions-2026'
+    category: 'Art and Exhibition',
+    image: '/images/blog/blog1.jpg', 
+    slug: 'art and exhibition'
   },
   {
     id: 3,
-    title: 'The Importance of Play in Early Childhood',
-    excerpt: 'Why our curriculum emphasizes guided play as a critical component of cognitive development.',
+    title: 'Enjoy AI Africa Open-Two Trophies Won',
+    excerpt: 'We proudly participated in the 2025 Enjoy AI Africa Open, an international competition featuring contestants from across Africa. Our learners delivered outstanding performances and returned home with two remarkable trophies.',
     date: 'Nov 15, 2025',
-    category: 'Education',
-    image: '/images/blog/play-time.jpg', 
-    slug: 'importance-of-play'
+    category: 'Robotics & AI',
+    image: '/images/blog/blog10.jpg', 
+    slug: 'Robotics and AI'
+  },
+   {
+    id: 3,
+    title: 'Enjoy AI Africa Open-Two Trophies Won',
+    excerpt: 'We proudly participated in the 2025 Enjoy AI Africa Open, an international competition featuring contestants from across Africa. Our learners delivered outstanding performances and returned home with two remarkable trophies.',
+    date: 'Nov 15, 2025',
+    category: 'Robotics & AI',
+    image: '/images/blog/blog10.jpg', 
+    slug: 'Robotics and AI'
   },
 ];
 

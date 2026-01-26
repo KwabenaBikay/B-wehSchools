@@ -7,20 +7,20 @@ type Staff = {
 };
 
 const staff: Staff[] = [
-  {
-    name: 'Rhoda Adjei',
-    role: 'Administrator',
-    photo: '/images/staff/rhoda.jpg',
-  },
-  {
+   {
     name: 'Rebecca  Efua Mankoh',
     role: 'Admin Academic Affairs',
     photo: '/images/staff/becky.jpg',
   },
   {
+    name: 'Rhoda Adjei',
+    role: 'Admin Admiistrative Affairs',
+    photo: '/images/staff/rhoda.jpg',
+  },
+  {
     name: 'Sarah Narki Dzamefe',
     role: 'Facilitator',
-    photo: '/images/staff/IMG_4309.jpg',
+    photo: '/images/staff/sarahl.jpg',
   },
   {
     name: 'Ruth Dugbe Botchwey',
@@ -85,9 +85,9 @@ const staff: Staff[] = [
     photo: '/images/staff/TT.jpg',
   },
     {
-    name: 'Florence Ayensu',
-    role: 'Genitor',
-    photo: '/images/staff/Florince2.jpg',
+    name: '',
+    role: 'Janitor',
+    photo: '/images/staff.jpg',
   },
   
 

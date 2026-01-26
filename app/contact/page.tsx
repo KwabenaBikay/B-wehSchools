@@ -126,12 +126,12 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="font-semibold text-slate-900">Phone</p>
-              <p className="mt-1 text-sm text-slate-600">+233 (0) </p>
+              <p className="mt-1 text-sm text-slate-600">+233 (0) 54 975 3104 </p>
             </div>
             <div>
               <p className="font-semibold text-slate-900">Email</p>
               <p className="mt-1 text-sm text-slate-600">
-                info@bwehschools.montessori
+                bwehschools@gmail.com
               </p>
             </div>
             <div>

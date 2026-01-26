@@ -158,7 +158,7 @@ export default function Navbar() {
         {/* --- RIGHT: Portal Button --- */}
         <div className="flex items-center gap-2">
           <Link
-            href="https://sms.bwehschool.com/login"
+            href="https://sms.bwehschools.com/login"
             target="_blank"
             className={`hidden items-center gap-2 rounded-md px-5 py-3 text-sm font-bold shadow-xl transition-all duration-300 transform hover:-translate-y-1 lg:inline-flex ${
               useLightMode

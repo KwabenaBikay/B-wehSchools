@@ -9,73 +9,72 @@ const SPOTLIGHT_ITEMS = [
   {
     id: 1,
     type: 'achievement',
-    category: 'Achievement',
-    title: 'Regional Math Olympiad Winner',
-    student: 'Kwame Mensah',
-    grade: 'KG 1',
-    // HAS 3 IMAGES -> Arrows will show
+    category: 'Sports',
+    title: 'Overal Sports Winner',
+    student: 'Elvis',
+    grade: 'Grade 2',
     images: [
-        'https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80',
-        'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?w=800&q=80',
-        'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80'
+        '/images/spotlight/elvis.jpg',
+        // Add extra photos:
+        // '/images/spotlight/math-award.jpg',
     ],
-    description: 'Kwame secured 1st place in the Central Region Math Olympiad, competing against 50+ schools.',
-    fullContent: 'Kwame has shown exceptional aptitude for mathematics since Grade 1. His dedication to solving complex problems led him to win the regional trophy. We are incredibly proud of his hard work and the support from our math department. Click through the images above to see photos from the competition day and the award ceremony.'
+    description: 'Elvis secured 1st place in the sports week of B-weh schools.',
+    fullContent: 'Elvis has shown exceptional. His dedication. We are incredibly proud of his hard work.'
   },
   {
     id: 2,
     type: 'art',
     category: 'Creativity',
-    title: 'Sunset over the Savannah',
-    student: 'Ama Osei',
-    grade: 'Basic 2',
-    //  more art images so arrows appear
+    title: 'Art and Exhibition',
+    student: 'Nana Abena',
+    grade: 'Kingdagateng 2',
+    //'public/images/spotlight/art-sunset.jpg'
     images: [
-        'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80',
-        'https://images.unsplash.com/photo-1560421683-6856ea585c78?w=800&q=80',
-        'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&q=80'
+        '/images/spotlight/art.jpg', 
     ],
-    description: 'Acrylic on Canvas. Selected for the National Youth Art Exhibition.',
+    description: 'We had our maiden Art and Exhibition Day', 
     fullContent: 'Ama captured the warmth of the Ghanaian sunset beautifully using acrylics. This piece was selected among thousands of entries for the national exhibition.' 
   },
   {
     id: 3,
     type: 'essay',
     category: 'Writing',
-    title: 'Why We Must Protect Our Oceans',
+    title: 'Writing',
     student: 'Sarah Johnson',
-    grade: 'Basic 2',
-    images: [], // Essays still have no images (Correct behavior)
+    grade: 'Nursery 2',
+    // Essays usually look better without an image (using the paper icon style), 
+    // but you can add one here if you really want to.
+    images: [
+      '/images/spotlight/write.jpg',
+    ], 
     description: 'An award-winning persuasive essay on environmental conservation.',
     fullContent: 'The ocean is the heart of our planet. It regulates climate, feeds millions, and produces the oxygen we breathe. Yet, we treat it as a dumping ground. In this essay, I explore three key ways students can reduce plastic waste...'
   },
   {
     id: 4,
     type: 'science',
-    category: 'STEM',
-    title: 'Hydraulic Arm Project',
-    student: 'Robotics Club Team',
-    grade: 'KG2',
-    // more science images
+    category: 'Science & Tech',
+    title: 'Nature and Plant Care',
+    student:'All Learners',
+    grade: 'Mixed Grades',
+    //'public/images/spotlight/hydraulic-arm.jpg'
     images: [
-        'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
-        'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80',
-        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80'
+        '/images/spotlight/plant.2.jpg',
+        '/images/spotlight/plant.jpg',
+        '/images/spotlight/plant.3.jpg',
     ],
-    description: 'A working hydraulic arm built entirely from recycled materials and syringes.',
-    fullContent: 'Our robotics team applied Pascal’s principle to create a mechanical arm capable of lifting 500g objects. The project demonstrates the power of fluid pressure and mechanical advantage.'
-  },
+    description: 'Moments from our Nature & Plant Care Activity.',
+    fullContent: 'The learners explored different gardening tools, soil types, and seeds. Each class planted something unique tomatoes, onions, okra, pepper, garden eggs, and more then watered their plants with so much excitement. This activity helps them learn responsibility, teamwork, and appreciation for nature.'},
   {
     id: 5,
     type: 'achievement',
     category: 'Achievement',
     title: 'Best Speller 2024',
     student: 'Emmanuel Darko',
-    grade: 'Nursery1',
-    // more spelling bee images
+    grade: 'Grade 4',
+    // CHANGE THIS: Matches 'public/images/spotlight/spelling-bee.jpg'
     images: [
-        'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80',
-        'https://images.unsplash.com/photo-1427504746696-277666db6992?w=800&q=80'
+        '/images/spotlight/spelling-bee.jpg'
     ],
     description: 'Emmanuel correctly spelled all 50 words to win the Inter-Class Spelling Bee.',
     fullContent: 'Emmanuel’s vocabulary has grown immensely this year. His favorite word to spell was "Chrysanthemum".'
@@ -86,17 +85,15 @@ const SPOTLIGHT_ITEMS = [
     category: 'Creativity',
     title: 'Recycled Sculpture',
     student: 'Creative Arts Class',
-    grade: 'Nursery 2',
-    // more sculpture images
+    grade: 'Grade 6',
+    // CHANGE THIS: Matches 'public/images/spotlight/sculpture.jpg'
     images: [
-        'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&q=80',
-        'https://images.unsplash.com/photo-1551590192-807e80d75d45?w=800&q=80'
+        '/images/spotlight/sculpture.jpg'
     ],
     description: 'A life-size sculpture of a turtle made from collected plastic bottles.',
     fullContent: 'This sculpture raises awareness about plastic pollution. The students collected over 200 bottles from the school grounds to create this masterpiece.'
   },
 ];
-
 const CATEGORIES = [
   { id: 'all', label: 'All Spotlights', icon: <FaStar /> },
   { id: 'Achievement', label: 'Achievements', icon: <FaTrophy /> },

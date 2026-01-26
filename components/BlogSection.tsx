@@ -14,7 +14,7 @@ const BLOG_POSTS = [
     category: 'STEAM',
 
     image: '/images/blog/blog10.jpg', 
-    slug: 'importance-of-play'
+    slug: 'enjoy-ai-africa-open'
   },
   {
     id: 2,
