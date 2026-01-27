@@ -160,6 +160,7 @@ export default function Navbar() {
           <Link
             href="https://sms.bwehschools.com/login"
             target="_blank"
+            rel="noopener noreferrer"
             className={`hidden items-center gap-2 rounded-md px-5 py-3 text-sm font-bold shadow-xl transition-all duration-300 transform hover:-translate-y-1 lg:inline-flex ${
               useLightMode
                 ? 'bg-white text-[#7e1b84] shadow-fuchsia-900/10 hover:bg-fuchsia-50' 
@@ -233,8 +234,9 @@ export default function Navbar() {
             })}
             <div className="mt-6">
                 <Link
-                href="https://sms.bwehschool.com/login"
+                href="https://sms.bwehschools.com/login"
                 target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-md bg-[#7e1b84] px-4 py-4 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#6b1670]"
                 >

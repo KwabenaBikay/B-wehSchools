@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { FaCalendarAlt, FaArrowLeft, FaUser, FaTag } from 'react-icons/fa';
 
-// IMPORT DATA FROM THE MAIN PAGE (To keep them in sync)
-import { BLOG_POSTS } from '../page'; 
+import { BLOG_POSTS } from '@/lib/blog-data'; 
 
 export default function SinglePostPage({ params }: { params: { slug: string } }) {
   // 1. Find the post that matches the URL slug

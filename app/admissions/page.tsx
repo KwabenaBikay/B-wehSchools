@@ -162,14 +162,14 @@ export default function AdmissionsPage() {
               
               <div className="space-y-4">
                 <a 
-                  href="tel:+233244123456" 
+                  href="tel:+233549753104" 
                   className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-fuchsia-100 bg-white py-3 font-bold text-slate-700 transition-colors hover:border-[#7e1b84] hover:text-[#7e1b84]"
                 >
-                  <FaPhoneAlt /> +233 244 123 456
+                  <FaPhoneAlt /> +233 54 975 3104
                 </a>
 
                 <a 
-                  href="mailto:admissions@bwehschool.com"
+                  href="mailto:bwehschools@gmail.com"
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#7e1b84] py-3 font-bold text-white shadow-lg transition-transform hover:-translate-y-1 hover:bg-[#6b1670]"
                 >
                   <FaEnvelope /> Contact Admissions Office

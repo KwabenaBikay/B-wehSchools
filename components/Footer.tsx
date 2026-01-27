@@ -65,8 +65,9 @@ export default function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-wider text-fuchsia-200">Staff & Parents</h3>
             <p className="mt-4 text-xs text-fuchsia-100 mb-4">Access the school management system.</p>
             <Link 
-              href="https://sms.bwehschool.com/login"
+              href="https://sms.bwehschools.com/login"
               target="_blank"
+              rel="noopener noreferrer"
               // Text color to match the new background
               className="inline-block rounded-md bg-white px-6 py-3 text-sm font-bold text-[#7e1b84] shadow-lg transition-transform hover:-translate-y-1 hover:text-black hover:shadow-xl"
             >

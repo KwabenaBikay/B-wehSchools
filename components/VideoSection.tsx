@@ -6,27 +6,56 @@ type VideoSectionProps = {
 
 export default function VideoSection({ youtubeUrl }: VideoSectionProps) {
   // Helper function to convert a "watch" URL to an "embed" URL automatically
+  // Security: Validates that URL is from YouTube before processing
   const getEmbedUrl = (url: string) => {
     try {
-      // If it's already an embed link, return it
-      if (url.includes('/embed/')) return url;
+      // Security: Validate URL is from YouTube
+      const isValidYouTubeUrl = 
+        url.includes('youtube.com') || 
+        url.includes('youtu.be') ||
+        url.startsWith('https://www.youtube.com/embed/');
+      
+      if (!isValidYouTubeUrl) {
+        console.error('Invalid YouTube URL:', url);
+        // Return a safe default or empty string
+        return '';
+      }
+
+      // If it's already an embed link, validate and return it
+      if (url.includes('/embed/')) {
+        // Ensure it's from youtube.com
+        if (url.startsWith('https://www.youtube.com/embed/')) {
+          return url;
+        }
+        return '';
+      }
 
       // If it's a standard youtube.com/watch?v=ID link
-      if (url.includes('v=')) {
-        const videoId = url.split('v=')[1].split('&')[0];
-        return `https://www.youtube.com/embed/${videoId}`;
+      if (url.includes('youtube.com') && url.includes('v=')) {
+        const videoId = url.split('v=')[1].split('&')[0].split('#')[0];
+        // Validate video ID format (alphanumeric, hyphens, underscores, 11 chars typical)
+        if (/^[a-zA-Z0-9_-]{11,}$/.test(videoId)) {
+          return `https://www.youtube.com/embed/${videoId}`;
+        }
+        return '';
       }
 
       // If it's a short youtu.be/ID link
       if (url.includes('youtu.be/')) {
-        const videoId = url.split('youtu.be/')[1];
-        return `https://www.youtube.com/embed/${videoId}`;
+        const videoId = url.split('youtu.be/')[1].split('?')[0].split('#')[0];
+        // Validate video ID format
+        if (/^[a-zA-Z0-9_-]{11,}$/.test(videoId)) {
+          return `https://www.youtube.com/embed/${videoId}`;
+        }
+        return '';
       }
 
-      return url;
+      // If we get here, URL format is not recognized
+      console.error('Unrecognized YouTube URL format:', url);
+      return '';
     } catch (error) {
       console.error('Error parsing YouTube URL:', error);
-      return url;
+      return '';
     }
   };
 
