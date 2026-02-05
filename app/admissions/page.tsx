@@ -198,7 +198,7 @@ export default function AdmissionsPage() {
               
               <div className="space-y-4">
                 <a 
-                  href="tel:+233551234567" // Update with real number
+                  href="tel:+233 54 975 3104"
                   className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-100 bg-white py-4 font-bold text-slate-700 transition-colors hover:border-[#7e1b84] hover:text-[#7e1b84]"
                 >
                   <FaPhoneAlt /> Call Admissions
