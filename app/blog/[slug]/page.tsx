@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { FaCalendarAlt, FaArrowLeft, FaUser, FaTag } from 'react-icons/fa';
 
-import { BLOG_POSTS } from '@/lib/blog-data'; 
+// Import from your shared data file
+import { BLOG_POSTS } from '@/app/blog/blog-data'; 
 
 export default function SinglePostPage({ params }: { params: { slug: string } }) {
   // 1. Find the post that matches the URL slug
@@ -23,6 +24,7 @@ export default function SinglePostPage({ params }: { params: { slug: string } })
           alt={post.title}
           fill
           className="object-cover brightness-50"
+          priority // Loads image faster
         />
         <div className="absolute inset-0 flex items-end">
           <div className="mx-auto max-w-4xl px-6 pb-16 w-full text-white">
@@ -36,7 +38,7 @@ export default function SinglePostPage({ params }: { params: { slug: string } })
                <span className="flex items-center gap-2"><FaUser /> Admin</span>
             </div>
 
-            <h1 className="text-4xl font-extrabold leading-tight md:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-extrabold leading-tight md:text-5xl lg:text-6xl drop-shadow-md">
               {post.title}
             </h1>
           </div>
@@ -45,29 +47,19 @@ export default function SinglePostPage({ params }: { params: { slug: string } })
 
       {/* Article Content */}
       <div className="mx-auto max-w-3xl px-6 py-12">
-        {/* Intro */}
+        {/* Intro / Excerpt */}
         <p className="text-xl font-medium leading-relaxed text-gray-700 mb-8 border-l-4 border-[#7e1b84] pl-4">
           {post.excerpt}
         </p>
 
-        {/* Dummy Body Content (Yet to add the rest) */}
-        <div className="prose prose-lg prose-purple text-gray-600">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <h3>Why this matters for our students</h3>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          </p>
-          <ul>
-            <li>Holistic development of the child.</li>
-            <li>Encouraging critical thinking skills.</li>
-            <li>Building confidence through practical activities.</li>
-          </ul>
-        </div>
+        {/* DYNAMIC CONTENT RENDERER 
+           This replaces the Lorem Ipsum with the real text from blog-data.ts 
+        */}
+        <div 
+          className="prose prose-lg prose-purple text-gray-600 max-w-none"
+          // This allows us to use HTML tags like <p>, <strong>, and <ul> in your data file
+          dangerouslySetInnerHTML={{ __html: post.content || '<p>Content coming soon...</p>' }}
+        />
       </div>
     </article>
   );

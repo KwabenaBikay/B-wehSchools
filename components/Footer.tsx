@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaInstagram, FaTiktok, FaFacebookF, FaYoutube, FaWhatsapp
 export default function Footer() {
   return (
     // Background to the specific Red-Purple from your image (#7e1b84)
-    <footer className="bg-[#7e1b84] text-white pt-20 pb-10 relative">
+    <footer className="bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 text-white pt-20 pb-10 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-8">
           
@@ -38,16 +38,17 @@ export default function Footer() {
               <li><Link href="/admissions" className="text-sm hover:text-white hover:underline transition-all">Admissions</Link></li>
               <li><Link href="/staff" className="text-sm hover:text-white hover:underline transition-all">Our Staff</Link></li>
               <li><Link href="/gallery" className="text-sm hover:text-white hover:underline transition-all">School Gallery</Link></li>
+              <li>
+              <Link href="/faq" className="text-gray-300 hover:text-white transition-colors"> FAQs</Link></li>
             </ul>
           </div>
-
           {/* Column 3: Contact */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-fuchsia-200">Contact Us</h3>
             <ul className="mt-4 space-y-3">
               <li className="flex gap-3 text-sm text-fuchsia-100">
                 <span> </span>
-                <span>Windy Ridge, Kasoa CP,<br/>Central Region, Ghana</span>
+                <span>CP Junction, Kasoa,<br/>Central Region, Ghana</span>
               </li>
               <li className="flex gap-3 text-sm text-fuchsia-100">
                 <span> </span>

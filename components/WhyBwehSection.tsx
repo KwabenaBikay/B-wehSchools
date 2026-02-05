@@ -9,7 +9,7 @@ const FEATURES = [
     title: 'Authentic Montessori',
     description: 'We follow the true Montessori method, fostering independence and a natural love for learning in a carefully prepared environment.',
     icon: <FaShapes className="text-4xl text-white" />,
-    color: 'bg-[#7e1b84]'
+    color: 'bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30'
   },
   {
     id: 2,

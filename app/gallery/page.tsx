@@ -23,6 +23,18 @@ const GALLERY_ITEMS = [
   { id: 14, src: '/images/gallery/image-14.jpg', category: 'Extracurricular', caption: 'Art Exhibition' },
   { id: 15, src: '/images/gallery/image-15.jpg', category: 'Extracurricular', caption: 'Art Exhibition' },
   { id: 16, src: '/images/gallery/image-16.jpg', category: 'Extracurricular', caption: 'Art Exhibition' },
+  { id: 17, src: '/images/gallery/image-17.jpg', category: 'Extracurricular', caption: 'Nature and Plant Care' },
+  { id: 18, src: '/images/gallery/image-18.jpg', category: 'Extracurricular', caption: 'Birthday Celebration' },
+  { id: 19, src: '/images/gallery/image-19.jpg', category: 'Extracurricular', caption: 'Birthday Celebration' },
+  { id: 20, src: '/images/gallery/image-20.jpg', category: 'Extracurricular', caption: 'Birthday Celebration' },
+  { id: 21, src: '/images/gallery/image-21.jpg', category: 'Extracurricular', caption: 'Birthday Celebration' },
+  { id: 22, src: '/images/gallery/image-22.jpg', category: 'Extracurricular', caption: 'Class Activity' },
+  { id: 23, src: '/images/gallery/image-23.jpg', category: 'Extracurricular', caption: 'Class Activity' },
+  { id: 24, src: '/images/gallery/image-24.jpg', category: 'Extracurricular', caption: 'Nature and Plant Care' },
+  { id: 25, src: '/images/gallery/image-25.jpg', category: 'Extracurricular', caption: 'Nature and Plant Care' },
+  { id: 26, src: '/images/gallery/image-26.jpg', category: 'Extracurricular', caption: 'Nature and Plant Care' },
+  { id: 27, src: '/images/gallery/image-27.jpg', category: 'Extracurricular', caption: 'Nature and Plant Care' },
+  { id: 28, src: '/images/gallery/image-28.jpg', category: 'Extracurricular', caption: 'Nature and Plant Care' },
 ];
 
 // Pinterest Layout Configuration

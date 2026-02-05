@@ -8,7 +8,7 @@ const TESTIMONIALS = [
     id: 1,
     name: "Mrs. Jennifer Opare",
     role: "Parent, Nursery 1",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80", // Replace with real parent image
+    image: "/images/testi/p1.jpg", 
     text: "The transformation in my son's confidence since joining B-Weh has been remarkable. The personalized attention he gets in the Montessori system is exactly what he needed.",
     rating: 5,
   },
@@ -16,7 +16,7 @@ const TESTIMONIALS = [
     id: 2,
     name: "Mr. Bandari Thomas",
     role: "Parent, Grade 1",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+    image: "/images/testi/p1.jpg",
     text: "I was worried about my daughter's transition to school, but the teachers here are so nurturing. She wakes up every morning excited to go to school. Best decision we made!",
     rating: 5,
   },
@@ -24,7 +24,7 @@ const TESTIMONIALS = [
     id: 3,
     name: "Dr. & Mrs. Mensah",
     role: "Parents, KG 2",
-    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&q=80",
+    image: "/images/testi/p1.jpg",
     text: "The balance between strict academic standards and creative extracurriculars like Robotics is impressive. B-Weh is truly preparing children for the modern world.",
     rating: 5,
   },
@@ -32,7 +32,7 @@ const TESTIMONIALS = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-[#7e1b84] py-24 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 py-24 relative overflow-hidden">
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>

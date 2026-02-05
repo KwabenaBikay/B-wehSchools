@@ -85,11 +85,15 @@ const staff: Staff[] = [
     photo: '/images/staff/TT.jpg',
   },
     {
-    name: '',
-    role: 'Janitor',
-    photo: '/images/staff.jpg',
+    name: 'Serah Donkor',
+    role: 'Janitor 1',
+    photo: '/images/staff/s.jpg',
   },
-  
+   {
+    name: 'Aweieriba Faith',
+    role: 'Janitor 2',
+    photo: '/images/staff/f.jpg',
+  },
 
 
 

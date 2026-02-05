@@ -65,34 +65,34 @@ const SPOTLIGHT_ITEMS = [
     ],
     description: 'Moments from our Nature & Plant Care Activity.',
     fullContent: 'The learners explored different gardening tools, soil types, and seeds. Each class planted something unique tomatoes, onions, okra, pepper, garden eggs, and more then watered their plants with so much excitement. This activity helps them learn responsibility, teamwork, and appreciation for nature.'},
-  {
-    id: 5,
-    type: 'achievement',
-    category: 'Achievement',
-    title: 'Best Speller 2024',
-    student: 'Emmanuel Darko',
-    grade: 'Grade 4',
-    // CHANGE THIS: Matches 'public/images/spotlight/spelling-bee.jpg'
-    images: [
-        '/images/spotlight/spelling-bee.jpg'
-    ],
-    description: 'Emmanuel correctly spelled all 50 words to win the Inter-Class Spelling Bee.',
-    fullContent: 'Emmanuel’s vocabulary has grown immensely this year. His favorite word to spell was "Chrysanthemum".'
-  },
-  {
-    id: 6,
-    type: 'art',
-    category: 'Creativity',
-    title: 'Recycled Sculpture',
-    student: 'Creative Arts Class',
-    grade: 'Grade 6',
-    // CHANGE THIS: Matches 'public/images/spotlight/sculpture.jpg'
-    images: [
-        '/images/spotlight/sculpture.jpg'
-    ],
-    description: 'A life-size sculpture of a turtle made from collected plastic bottles.',
-    fullContent: 'This sculpture raises awareness about plastic pollution. The students collected over 200 bottles from the school grounds to create this masterpiece.'
-  },
+  // {
+  //   id: 5,
+  //   type: 'achievement',
+  //   category: 'Achievement',
+  //   title: 'Best Speller 2024',
+  //   student: 'Emmanuel Darko',
+  //   grade: 'Grade 4',
+  //   // CHANGE THIS: Matches 'public/images/spotlight/spelling-bee.jpg'
+  //   images: [
+  //       '/images/spotlight/spelling-bee.jpg'
+  //   ],
+  //   description: 'Emmanuel correctly spelled all 50 words to win the Inter-Class Spelling Bee.',
+  //   fullContent: 'Emmanuel’s vocabulary has grown immensely this year. His favorite word to spell was "Chrysanthemum".'
+  // },
+  // {
+  //   id: 6,
+  //   type: 'art',
+  //   category: 'Creativity',
+  //   title: 'Recycled Sculpture',
+  //   student: 'Creative Arts Class',
+  //   grade: 'Grade 6',
+  //   // CHANGE THIS: Matches 'public/images/spotlight/sculpture.jpg'
+  //   images: [
+  //       '/images/spotlight/sculpture.jpg'
+  //   ],
+  //   description: 'A life-size sculpture of a turtle made from collected plastic bottles.',
+  //   fullContent: 'This sculpture raises awareness about plastic pollution. The students collected over 200 bottles from the school grounds to create this masterpiece.'
+  // },
 ];
 const CATEGORIES = [
   { id: 'all', label: 'All Spotlights', icon: <FaStar /> },
@@ -154,7 +154,7 @@ export default function StudentSpotlightPage() {
               onClick={() => setActiveFilter(cat.id)}
               className={`flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-bold transition-all ${
                 activeFilter === cat.id
-                  ? 'bg-[#7e1b84] text-white shadow-lg shadow-fuchsia-500/30'
+                  ? 'bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 text-white shadow-lg shadow-fuchsia-500/30'
                   : 'bg-white text-gray-600 hover:bg-fuchsia-100 hover:text-[#7e1b84]'
               }`}
             >

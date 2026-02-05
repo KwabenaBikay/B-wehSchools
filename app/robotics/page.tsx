@@ -88,7 +88,7 @@ export default function RoboticsPage() {
       </section>
 
       {/* --- CORE PILLARS GRID --- */}
-      <section className="bg-[#7e1b84] py-24 text-white relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 py-24 text-white relative overflow-hidden">
         {/* Decorative background circle */}
         <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
 

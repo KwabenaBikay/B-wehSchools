@@ -95,7 +95,7 @@ export default function Navbar() {
           <div className={`flex items-center gap-1 rounded-full px-8 py-4 text-sm font-semibold shadow-xl transition-all duration-300 ${
             useLightMode
               ? 'bg-white/95 text-slate-700 shadow-slate-900/10'
-              : 'bg-[#7e1b84] text-white shadow-fuchsia-900/20'
+              : 'bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 text-white shadow-fuchsia-900/20'
           }`}>
             {NAV_LINKS.map((link) => {
               const hasDropdown = link.children && link.children.length > 0;
@@ -131,7 +131,7 @@ export default function Navbar() {
                     <div className="absolute left-1/2 top-full mt-4 w-56 -translate-x-1/2 opacity-0 invisible transform translate-y-2 transition-all duration-200 group-hover/dropdown:opacity-100 group-hover/dropdown:visible group-hover/dropdown:translate-y-0">
                       {/* Squared Edges (rounded-none) */}
                       <div className={`overflow-hidden shadow-2xl ring-1 ring-black/5 rounded-none transition-colors duration-300 ${
-                        useLightMode ? 'bg-white' : 'bg-[#7e1b84] border border-fuchsia-400/30'
+                        useLightMode ? 'bg-white' : 'bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 border border-fuchsia-400/30'
                       }`}>
                         {link.children?.map((child) => (
                           <Link
@@ -164,7 +164,7 @@ export default function Navbar() {
             className={`hidden items-center gap-2 rounded-md px-5 py-3 text-sm font-bold shadow-xl transition-all duration-300 transform hover:-translate-y-1 lg:inline-flex ${
               useLightMode
                 ? 'bg-white text-[#7e1b84] shadow-fuchsia-900/10 hover:bg-fuchsia-50' 
-                : 'bg-[#7e1b84] text-white shadow-fuchsia-900/20 hover:bg-[#6b1670]' 
+                : 'bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 text-white shadow-fuchsia-900/20 hover:bg-[#6b1670]' 
             }`}
           >
             <FaLock className="mb-0.5" /> <span className="hidden lg:inline">School Portal</span>
@@ -238,7 +238,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="flex w-full items-center justify-center gap-2 rounded-md bg-[#7e1b84] px-4 py-4 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#6b1670]"
+                className="flex w-full items-center justify-center gap-2 rounded-md bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 px-4 py-4 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#6b1670]"
                 >
                 <FaLock className="mb-0.5" /> Log into Portal
                 </Link>
