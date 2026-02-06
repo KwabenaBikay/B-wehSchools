@@ -139,7 +139,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold">Phone</h3>
                     <p className="text-purple-200 text-sm mt-1">
-                      +233 (0) 
+                      +233 (0) 54 975 3104
                     </p>
                   </div>
                 </div>
