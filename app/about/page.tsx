@@ -6,10 +6,11 @@ export default function AboutPage() {
     <main className="bg-white">
       
       {/* ==================== 
-          SECTION 1: HERO / WHO WE ARE 
+          SECTION 1: HERO / WHO WE ARE (Merged Style)
       ==================== */}
-      <section className="relative pt-32 pb-20 overflow-visible">
-        {/* Background Decorative Blob (Top Right) */}
+      <section className="relative pt-32 pb-20 overflow-visible bg-white">
+        
+        {/* Decorative background circle */}
         <div className="absolute top-0 right-0 -z-10 translate-x-1/3 -translate-y-1/4 transform">
           <div className="h-[600px] w-[600px] rounded-full bg-fuchsia-50 blur-3xl opacity-70"></div>
         </div>
@@ -17,16 +18,24 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
             
-            {/* --- TEXT CONTENT --- */}
+            {/* --- TEXT CONTENT (Kept the New Premium Style!) --- */}
             <div>
-              <h1 className="mb-6 text-4xl font-extrabold text-[#7e1b84] sm:text-5xl leading-tight">
-                Hello There !
+              <div className="inline-block mb-4 px-3 py-1 bg-slate-900 text-white text-xs font-bold uppercase tracking-widest">
+                Who We Are
+              </div>
+              <h1 className="mb-6 text-4xl font-extrabold text-slate-900 sm:text-5xl md:text-6xl leading-tight tracking-tight">
+                Hello There!
               </h1>
               
+              <div className="border-l-4 border-[#7e1b84] pl-6 mb-8">
+                <p className="text-xl text-gray-800 font-medium leading-relaxed">
+                  B-weh School (Montessori) is a private Montessori school aimed to provide 
+                  the best and quality early childhood education service at a fair price.
+                </p>
+              </div>
+              
               <p className="mb-6 text-lg text-gray-600 leading-relaxed">
-                B-weh School (Montessori) is a private Montessori school aimed to provide 
-                the best and quality early childhood education service at a fair price; it gives 
-                more attention to quality education service and aims to become a benchmark for the others. 
+                We give more attention to quality education service and aim to become a benchmark for others. 
                 B-weh Schools seeks to help society by molding students into reaching their full potential.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
@@ -36,35 +45,30 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* --- IMAGE LAYOUT --- */}
-            <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+            {/* --- IMAGE LAYOUT  --- */}
+            <div className="relative flex justify-center lg:justify-end mt-12 lg:mt-0 px-4">
               
-              {/* 1. RESTORED GRAY SHAPE BEHIND */}
-              {/* This sits behind the main image to give it depth */}
+              {/* 1. Original Gray Shape Behind */}
               <div className="absolute inset-0 bg-gray-100 rounded-t-[100px] rounded-br-[100px] rounded-bl-3xl transform scale-105 translate-x-3 translate-y-3 -z-20"></div>
               
-              {/* 2. MAIN IMAGE (Compact on Mobile, Large on Desktop) */}
-              <div className="relative z-10 h-64 sm:h-96 lg:h-[480px] w-full max-w-lg lg:max-w-xl overflow-hidden rounded-t-[100px] rounded-br-[100px] rounded-bl-3xl shadow-2xl border-4 border-white">
+              {/* 2. MAIN IMAGE (Curved edges, border-4) */}
+              <div className="relative z-10 h-72 sm:h-96 lg:h-[500px] w-full max-w-lg lg:max-w-xl overflow-hidden rounded-t-[100px] rounded-br-[100px] rounded-bl-3xl shadow-2xl border-4 border-white">
                 <Image 
                   src="/images/about/hero.jpg" 
-                  alt="Happy students at B-Weh School"
+                  alt="Happy students at B-weh School"
                   fill
                   className="object-cover"
                   priority={true}
                 />
               </div>
 
-              {/* 3. SECONDARY IMAGE (Small/Cute on Mobile, Big on Desktop) */}
-              {/* -bottom-6 (tucked up slightly)
-                  h-24 w-24 (Small on mobile)
-                  lg:h-48 lg:w-48 (Large on desktop) 
-              */}
+              {/* 3. SECONDARY IMAGE (Small, Round, subtle shadow and outline) */}
               <div className="absolute -bottom-6 -right-2 sm:-right-8 z-20 h-24 w-24 sm:h-32 sm:w-32 lg:h-48 lg:w-48 overflow-hidden rounded-full border-4 border-white shadow-xl bg-white">
                 <Image 
                   src="/images/about/vision.jpg" 
                   alt="Students learning"
                   fill
-                  className="object-cover hover:scale-110 transition-transform duration-500"
+                  className="object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
 
@@ -77,9 +81,8 @@ export default function AboutPage() {
 
       {/* ==================== 
           SECTION 2: VISION & MISSION 
-          Style: Cards with clean icons and distinct separation
-      ==================== */}
-      <section className="py-20 bg-slate-50 relative">
+                ==================== */}
+      <section className="py-20 bg-slate-50 relative border-t border-gray-100">
          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               
@@ -93,14 +96,13 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Vision</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    To provide pre - tertiary and secondary education, aimed at process and results.
+                    To provide pre-tertiary and secondary education, aimed at process and results.
                   </p>
                 </div>
               </div>
 
               {/* Mission Card */}
-              <div className="bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 p-10 rounded-3xl shadow-lg text-white relative overflow-hidden">
-                {/* Background Pattern */}
+              <div className="bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] p-10 rounded-3xl shadow-lg shadow-purple-900/30 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl -mr-16 -mt-16"></div>
                 
                 <div className="relative z-10">
@@ -109,7 +111,7 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
                   <p className="text-fuchsia-100 leading-relaxed">
-                    THelping children reach their full potential while considering their emotional, physical, intellectual, and 
+                    Helping children reach their full potential while considering their emotional, physical, intellectual, and 
                     social development through a nurturing and stimulating environment that is based on the Montessori philosophy.
                   </p>
                 </div>
@@ -122,9 +124,8 @@ export default function AboutPage() {
 
       {/* ==================== 
           SECTION 3: CORE VALUES 
-          Style: Clean grid (Writic Inspiration for clean typography)
       ==================== */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-white border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl mb-4">Our Core Values</h2>

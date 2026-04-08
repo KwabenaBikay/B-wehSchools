@@ -5,72 +5,51 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 
-// Import all available posts
+// I am importing all available posts
 import { BLOG_POSTS } from '@/app/blog/blog-data';
 
 export default function BlogSection() {
-  // 1. Set initial state (Default to the first 3 posts so something shows immediately)
+  // 1. My state to display posts
   const [displayPosts, setDisplayPosts] = useState(BLOG_POSTS.slice(0, 3));
   const [isMounted, setIsMounted] = useState(false);
 
-  // 2. Shuffle Logic (Runs only on the client side after refresh)
+  // 2. My Shuffle Logic
   useEffect(() => {
     setIsMounted(true);
-    
-    // Create a copy of the all posts array
     const allPosts = [...BLOG_POSTS];
-
-    // Fisher-Yates Shuffle Algorithm (The most robust way to randomize)
     for (let i = allPosts.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [allPosts[i], allPosts[j]] = [allPosts[j], allPosts[i]];
     }
-
-    // Take the top 3 from the shuffled deck
     setDisplayPosts(allPosts.slice(0, 3));
   }, []);
 
-  // 3. Define which is Big (Featured) and which are Small (Side)
   const featuredPost = displayPosts[0];
   const sidePosts = displayPosts.slice(1, 3);
 
-  // Prevent layout shift/flicker by rendering a consistent height wrapper if needed
-  // (Optional: current approach just updates instantly)
-
   return (
-    <section className="py-20 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="news" className="py-20 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col">
         
-        {/* --- HEADER --- */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div className="max-w-3xl">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-fuchsia-500 mb-2">
-              From the Campus
-            </h2>
-            <h3 className="text-3xl font-extrabold tracking-tight text-[#7e1b84] sm:text-4xl">
-              Latest School Insights & News
-            </h3>
-            <p className="mt-3 text-lg text-gray-600">
-              Stay updated with student achievements, upcoming events, and stories from our vibrant community.
-            </p>
-          </div>
-          
-          <Link 
-            href="/blog"
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-[#6b1670] transition-transform hover:-translate-y-0.5"
-          >
-            View All News <FaArrowRight />
-          </Link>
+        {/* --- MY HEADER --- */}
+        <div className="mb-12">
+          <h3 className="text-3xl font-extrabold tracking-tight text-[#7e1b84] sm:text-4xl">
+            Latest School Insights & News
+          </h3>
+          <p className="mt-3 text-lg text-gray-600 max-w-3xl">
+            Stay updated with student achievements, upcoming events, and stories from our vibrant community.
+          </p>
         </div>
 
-        {/* --- GRID --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        {/* --- MY GRID --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
           
           {/* === LEFT COLUMN: FEATURED POST (Big Card) === */}
           <div className="lg:col-span-7">
             {featuredPost && (
               <Link href={`/blog/${featuredPost.slug}`} className="group block h-full">
-                <article className="flex flex-col h-full rounded-2xl overflow-hidden bg-fuchsia-50 border border-fuchsia-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-fuchsia-200">
+                {/* Removed rounded edges (rounded-none) */}
+                <article className="flex flex-col h-full rounded-none overflow-hidden bg-fuchsia-50 border border-fuchsia-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-fuchsia-200">
                   
                   <div className="relative h-64 sm:h-80 w-full overflow-hidden">
                     <Image
@@ -79,7 +58,8 @@ export default function BlogSection() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 left-4 rounded-full bg-white/95 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#7e1b84] shadow-sm">
+                    {/* Squared off the badge */}
+                    <div className="absolute top-4 left-4 rounded-none bg-white/95 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#7e1b84] shadow-sm">
                       {featuredPost.category}
                     </div>
                   </div>
@@ -109,10 +89,12 @@ export default function BlogSection() {
           {/* === RIGHT COLUMN: SIDE LIST (Small Cards) === */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             {sidePosts.map((post) => (
-              <Link key={post.id} href={`/blog/${post.slug}`} className="group block h-full">
-                <article className="flex flex-row items-stretch gap-4 rounded-xl bg-fuchsia-50 p-3 border border-transparent hover:border-fuchsia-200 hover:shadow-lg transition-all duration-300 h-full">
+              <Link key={post.id || post.slug} href={`/blog/${post.slug}`} className="group block h-full">
+                {/* Removed rounded edges */}
+                <article className="flex flex-row items-stretch gap-4 rounded-none bg-fuchsia-50 p-3 border border-transparent hover:border-fuchsia-200 hover:shadow-lg transition-all duration-300 h-full">
                   
-                  <div className="relative w-32 sm:w-40 flex-shrink-0 overflow-hidden rounded-lg">
+                  {/* Squared off the image container */}
+                  <div className="relative w-32 sm:w-40 flex-shrink-0 overflow-hidden rounded-none">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -140,11 +122,12 @@ export default function BlogSection() {
 
         </div>
 
-        {/* Mobile View All Button */}
-        <div className="mt-10 md:hidden text-center">
+        {/* --- MY BOTTOM BUTTON --- */}
+        <div className="flex justify-center">
+          {/* Made the button flat to match the hero section */}
           <Link 
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 px-8 py-3 text-sm font-bold text-white shadow-lg"
+            className="inline-flex items-center gap-2 rounded-none bg-[#7e1b84] px-10 py-4 text-base font-bold text-white transition-all hover:bg-[#6b1670]"
           >
             View All News <FaArrowRight />
           </Link>

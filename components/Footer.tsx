@@ -22,7 +22,7 @@ export default function Footer() {
                   className="h-full w-full object-contain"
                 />
               </div>
-              <span className="text-xl font-bold tracking-tight">B-Weh<br/>Montessori</span>
+              <span className="text-xl font-bold tracking-tight">B-weh<br/>Montessori</span>
             </Link>
             {/* Using fuchsia-100 because it matches Red-Purple better than blue-purple */}
             <p className="mt-6 text-sm text-fuchsia-100 leading-relaxed">
@@ -36,12 +36,14 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               <li><Link href="/about" className="text-sm hover:text-white hover:underline transition-all">About Us</Link></li>
               <li><Link href="/admissions" className="text-sm hover:text-white hover:underline transition-all">Admissions</Link></li>
-              <li><Link href="/staff" className="text-sm hover:text-white hover:underline transition-all">Our Staff</Link></li>
+              <li><Link href="/staff" className="text-sm hover:text-white hover:underline transition-all">Our Team</Link></li>
               <li><Link href="/gallery" className="text-sm hover:text-white hover:underline transition-all">School Gallery</Link></li>
-              <li>
-              <Link href="/faq" className="text-gray-300 hover:text-white transition-colors"> FAQs</Link></li>
+              {/* I added the Blog/News link right here! */}
+              <li><Link href="/blog" className="text-sm hover:text-white hover:underline transition-all">School News</Link></li>
+              <li><Link href="/faq" className="text-gray-300 hover:text-white transition-colors"> FAQs</Link></li>
             </ul>
           </div>
+
           {/* Column 3: Contact */}
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-fuchsia-200">Contact Us</h3>
@@ -50,7 +52,7 @@ export default function Footer() {
                 <span> </span>
                 <span>CP Junction, Kasoa,<br/>Central Region, Ghana</span>
               </li>
-              <li className="flex gap-3 text-sm text-fuchsia-100">
+              <li className="flex gap-3 text-sm text-f.uchsia-100">
                 <span> </span>
                 <a href="tel:+233549753104" className="hover:text-white">+233 54 975 3104</a>
               </li>

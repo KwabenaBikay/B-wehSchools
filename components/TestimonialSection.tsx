@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FaStar, FaQuoteLeft } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 
 const TESTIMONIALS = [
   {
@@ -32,52 +32,61 @@ const TESTIMONIALS = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 py-24 relative overflow-hidden">
+    <section className="relative py-24 bg-slate-900 overflow-hidden border-y border-slate-800">
       
-      {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-fuchsia-500/20 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+      {/* --- SUBTLE BRAND GLOW (Very faint, cinematic lighting) --- */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[500px] bg-[#7e1b84]/20 blur-[120px] pointer-events-none"></div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-fuchsia-300">
-            Parent Stories
-          </h2>
-          <h3 className="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
-            What Families Say About Us
-          </h3>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-fuchsia-100">
-            Don't just take our word for it. Hear from the community that trusts us with their children's future.
+        {/* --- HEADER (Updated for Dark Background) --- */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="max-w-2xl">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-fuchsia-400 mb-4">
+              Parent Stories
+            </h2>
+            <h3 className="text-4xl font-extrabold text-white uppercase tracking-tight sm:text-5xl">
+              Trusted by Families
+            </h3>
+          </div>
+          <p className="text-lg text-slate-400 font-medium max-w-sm md:text-right">
+            Hear directly from the community that trusts us with their children's future.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid gap-8 md:grid-cols-3">
+        {/* --- GRID (Bright White Cards that pop against the dark background) --- */}
+        <div className="grid gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <div 
               key={t.id} 
-              className="bg-white rounded-2xl p-8 shadow-xl transition-transform hover:-translate-y-2"
+              className="group relative bg-white p-8 md:p-10 flex flex-col justify-between transition-colors duration-500 hover:bg-[#7e1b84] shadow-2xl"
             >
-              {/* Stars */}
-              <div className="flex gap-1 mb-4 text-yellow-400">
-                {[...Array(t.rating)].map((_, i) => (
-                  <FaStar key={i} />
-                ))}
+              
+              {/* Massive Decorative Quote Mark */}
+              <div className="absolute top-6 right-6 text-7xl font-serif font-black text-slate-100 leading-none group-hover:text-fuchsia-400/20 transition-colors pointer-events-none select-none">
+                "
               </div>
 
-              {/* Quote Icon */}
-              <FaQuoteLeft className="text-fuchsia-100 text-4xl mb-4" />
+              {/* Content Wrapper */}
+              <div className="relative z-10 flex-grow">
+                {/* Stars */}
+                <div className="flex gap-1 mb-8 text-[#7e1b84] group-hover:text-yellow-400 transition-colors">
+                  {[...Array(t.rating)].map((_, i) => (
+                    <FaStar key={i} size={14} />
+                  ))}
+                </div>
 
-              {/* Text */}
-              <p className="text-gray-600 italic mb-8 leading-relaxed">
-                "{t.text}"
-              </p>
+                {/* Text */}
+                <p className="text-slate-700 text-lg font-medium leading-relaxed mb-10 group-hover:text-white transition-colors">
+                  {t.text}
+                </p>
+              </div>
 
-              {/* User Info */}
-              <div className="flex items-center gap-4 mt-auto">
-                <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full border-2 border-fuchsia-100">
+              {/* User Info & Footer */}
+              <div className="relative z-10 flex items-center gap-5 mt-auto pt-6 border-t border-slate-100 group-hover:border-white/20 transition-colors">
+                
+                {/* Square Image Avatar */}
+                <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden bg-slate-200 grayscale group-hover:grayscale-0 transition-all duration-500">
                   <Image
                     src={t.image}
                     alt={t.name}
@@ -86,11 +95,19 @@ export default function TestimonialSection() {
                     unoptimized={true}
                   />
                 </div>
+                
+                {/* Author Name */}
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900">{t.name}</h4>
-                  <p className="text-xs text-[#7e1b84] font-semibold">{t.role}</p>
+                  <h4 className="text-base font-bold text-slate-900 uppercase tracking-wider group-hover:text-white transition-colors">
+                    {t.name}
+                  </h4>
+                  <p className="text-xs font-bold text-[#7e1b84] uppercase tracking-widest mt-1 group-hover:text-fuchsia-300 transition-colors">
+                    {t.role}
+                  </p>
                 </div>
+
               </div>
+
             </div>
           ))}
         </div>

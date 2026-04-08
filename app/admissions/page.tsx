@@ -27,29 +27,26 @@ const ADMISSION_STEPS = [
   },
 ];
 
-//using external Links (Google Drive)
+// External Links
 const DOCUMENTS = [
   {
     title: 'Admission Form',
     desc: 'Official application form for new students.',
-    icon: <FaFilePdf className="h-8 w-8 text-red-500" />,
-    // GOOGLE DRIVE LINK 
-    href: 'https://drive.google.com/file/d/1mJ9xiqdC1bGQdubYLjKct9EzOR8pY-VI/view?usp=drive_link', 
+    icon: <FaFilePdf className="h-10 w-10 text-red-500" />,
+    href: 'https://drive.google.com/file/d/1mJ9xiqdC1bGQdubYLjKct9EzOR8pY-VI/view?usp=drive_link',
     btnText: 'Download Form'
   },
   {
     title: 'School Prospectus',
     desc: 'Detailed guide on our curriculum and values.',
-    icon: <FaBookOpen className="h-8 w-8 text-[#7e1b84]" />,
-    // GOOGLE DRIVE LINK
+    icon: <FaBookOpen className="h-10 w-10 text-[#7e1b84]" />,
     href: 'https://drive.google.com/file/d/1qPaLzBe8H5kZGaq7gFhuzBeFggRf8Gkb/view?usp=drive_link',
     btnText: 'Download Prospectus'
   },
   {
     title: 'Academic Calendar',
     desc: 'Key dates, holidays, and term schedules.',
-    icon: <FaCalendarAlt className="h-8 w-8 text-fuchsia-500" />,
-    // GOOGLE DRIVE LINK
+    icon: <FaCalendarAlt className="h-10 w-10 text-fuchsia-500" />,
     href: 'https://drive.google.com/file/d/110NfdToUxlEazWMify35pKaAJOSJHhYY/view?usp=sharing',
     btnText: 'View Calendar'
   },
@@ -65,62 +62,64 @@ const REQUIREMENTS = [
 
 export default function AdmissionsPage() {
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main className="min-h-screen bg-white">
       
       {/* ==================== 
-          1. HERO SECTION (Background Image)
+          1. HERO SECTION 
       ==================== */}
-      <section className="relative h-[500px] w-full flex flex-col items-center justify-center text-center px-4">
-        {/* Background Image */}
+      <section className="relative h-[65vh] min-h-[550px] w-full flex flex-col items-center justify-center text-center px-4 bg-slate-900">
+        
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/admissions/hero.jpg" //
+            src="/images/admissions/hero.jpg" 
             alt="B-Weh Admissions"
             fill
-            className="object-cover brightness-50" // Darkens image for text readability
+            className="object-cover"
             priority
           />
         </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 text-white mb-24 max-w-4xl">
-          <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl drop-shadow-lg">
+        <div className="absolute inset-0 bg-slate-900/60 z-10" />
+
+        <div className="relative z-20 text-white mb-24 max-w-4xl">
+          <div className="inline-block mb-6 px-4 py-1.5 bg-[#7e1b84] text-white text-xs font-bold uppercase tracking-widest">
+            Join Our Family
+          </div>
+          <h1 className="text-5xl font-black tracking-tight sm:text-6xl lg:text-7xl uppercase drop-shadow-lg">
             Admissions Process
           </h1>
-          <p className="mx-auto mt-6 text-lg sm:text-xl text-purple-100 font-light max-w-2xl drop-shadow-md">
-            We are delighted that you are considering B-Weh Schools Montessori for your child’s education.
+          <p className="mx-auto mt-6 text-lg sm:text-xl text-slate-200 font-medium max-w-2xl drop-shadow-md">
+            We are delighted that you are considering B-weh Schools Montessori for your child’s education. Follow our simple guide below to begin.
           </p>
-          <div className="mt-8">
-             <span className="inline-block px-4 py-1 rounded-full border border-white/30 bg-white/10 backdrop-blur-md text-sm font-semibold tracking-wider uppercase">
-                Step-by-Step Guide Below
-             </span>
-          </div>
         </div>
       </section>
 
       {/* ==================== 
-          2. FLOATING STEPS SECTION (Overlays the Hero)
+          2. FLOATING STEPS SECTION 
       ==================== */}
-      <section className="px-4 sm:px-6 lg:px-8 -mt-32 relative z-20 pb-20">
+      <section className="px-4 sm:px-6 lg:px-8 -mt-32 relative z-30 pb-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {ADMISSION_STEPS.map((item) => (
               <div 
                 key={item.step} 
-                className="relative rounded-2xl bg-white p-8 shadow-xl border-t-4 border-[#7e1b84] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                className="relative rounded-none bg-white p-8 shadow-xl border-t-4 border-[#7e1b84] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl overflow-hidden group"
               >
-                <div className="absolute top-4 right-4 text-6xl font-black text-slate-100 -z-10 select-none">
+                <div className="absolute -top-4 -right-2 text-8xl font-black text-slate-50 z-0 select-none transition-transform duration-500 group-hover:scale-110">
                     {item.step}
                 </div>
-                <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full bg-fuchsia-100 text-[#7e1b84] font-bold text-lg">
-                  {item.step}
+                
+                <div className="relative z-10">
+                  <div className="mb-6 inline-flex items-center justify-center w-12 h-12 bg-slate-900 text-white font-bold text-lg rounded-none">
+                    {item.step}
+                  </div>
+                  <h3 className="mb-3 text-xl font-bold text-slate-900 uppercase tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-gray-600 font-medium">
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-slate-900">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-gray-600">
-                  {item.desc}
-                </p>
               </div>
             ))}
           </div>
@@ -128,31 +127,34 @@ export default function AdmissionsPage() {
       </section>
 
       {/* ==================== 
-          3. DOWNLOADS CENTER
+          3. DOWNLOADS CENTER (New Contrast Background!)
       ==================== */}
-      <section className="bg-slate-50 pb-24">
+      {/* Changed to bg-slate-100 and added py-24 for a distinct block */}
+      <section className="bg-slate-100 py-24 border-y border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-                <h3 className="text-3xl font-bold text-[#7e1b84]">Downloads Center</h3>
-                <p className="text-gray-600 mt-2">Access essential documents for your application.</p>
+            <div className="text-center mb-16">
+                <h3 className="text-3xl font-extrabold text-[#7e1b84] uppercase tracking-tight">Downloads Center</h3>
+                <div className="mt-4 h-1 w-16 bg-fuchsia-500 mx-auto"></div>
+                <p className="text-gray-600 mt-4 font-medium">Access essential documents for your application.</p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-3">
                 {DOCUMENTS.map((doc) => (
-                    <div key={doc.title} className="group bg-white rounded-2xl p-8 shadow-sm border border-slate-100 flex flex-col items-center text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-                        <div className="mb-6 p-5 rounded-full bg-slate-50 group-hover:bg-fuchsia-50 transition-colors">
+                    // Cards are now pure bg-white with a shadow to pop off the slate background
+                    <div key={doc.title} className="group bg-white p-10 border border-transparent shadow-md transition-all duration-300 hover:border-[#7e1b84] hover:shadow-xl flex flex-col items-center text-center rounded-none">
+                        <div className="mb-8 p-4 text-slate-900 transition-transform duration-500 group-hover:scale-110 group-hover:text-[#7e1b84]">
                             {doc.icon}
                         </div>
-                        <h4 className="text-xl font-bold text-slate-900 mb-2">{doc.title}</h4>
-                        <p className="text-sm text-gray-500 mb-8 flex-1 leading-relaxed">{doc.desc}</p>
+                        <h4 className="text-xl font-bold text-slate-900 mb-3">{doc.title}</h4>
+                        <p className="text-sm text-gray-500 mb-10 flex-1 leading-relaxed font-medium">{doc.desc}</p>
                         
                         <a 
                             href={doc.href} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-slate-100 px-6 py-3 text-sm font-bold text-slate-700 transition-all hover:bg-gradient-to-br hover:from-[#9c27b0] hover:to-[#7e1b84] hover:text-white hover:shadow-lg"
+                            className="w-full inline-flex items-center justify-center gap-3 rounded-none border-2 border-slate-900 bg-transparent px-6 py-4 text-sm font-bold uppercase tracking-widest text-slate-900 transition-all hover:bg-slate-900 hover:text-white"
                         >
-                            <FaFileDownload /> {doc.btnText}
+                            <FaFileDownload size={16} /> {doc.btnText}
                         </a>
                     </div>
                 ))}
@@ -161,61 +163,63 @@ export default function AdmissionsPage() {
       </section>
 
       {/* ==================== 
-          4. REQUIREMENTS SECTION 
+          4. REQUIREMENTS & CONTACT 
       ==================== */}
-      <div className="bg-[#1a0b1f] py-24 text-white relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#7e1b84] rounded-full mix-blend-multiply filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-fuchsia-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2"></div>
-
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid gap-16 lg:grid-cols-2 items-center">
+      <section className="py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             
-            {/* Left: Text Info */}
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Admission Requirements</h2>
-              <p className="text-slate-300 mb-10 text-lg leading-relaxed">
-                To ensure a smooth enrollment process, please ensure you have the following documents ready when submitting your application.
+            {/* Left: Requirements */}
+            <div className="border border-slate-200 bg-slate-50 p-10 lg:p-14 flex flex-col justify-center relative shadow-sm">
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#7e1b84]"></div>
+              
+              <h2 className="text-3xl font-extrabold text-slate-900 uppercase tracking-tight mb-4">What You Need</h2>
+              <p className="text-slate-600 text-lg mb-10 font-medium">
+                To ensure a smooth enrollment process, please have the following documents ready when submitting your application.
               </p>
-              <ul className="space-y-5">
+              
+              <ul className="space-y-6">
                 {REQUIREMENTS.map((req) => (
                   <li key={req} className="flex items-start gap-4">
-                    <FaCheckCircle className="text-fuchsia-400 h-6 w-6 flex-shrink-0 mt-0.5" />
-                    <span className="text-slate-100 text-lg">{req}</span>
+                    <FaCheckCircle className="text-fuchsia-500 h-6 w-6 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-800 font-bold text-lg">{req}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Right: CTA Box */}
-            <div className="rounded-3xl bg-white p-10 text-center shadow-2xl">
-              <h3 className="text-2xl font-bold text-[#7e1b84] mb-4">
+            {/* Right: Contact CTA */}
+            <div className="bg-[#7e1b84] p-10 lg:p-14 text-white flex flex-col justify-center relative shadow-xl">
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-fuchsia-400"></div>
+
+              <h3 className="text-4xl font-extrabold mb-4 tracking-tight">
                 Have Questions?
               </h3>
-              <p className="text-gray-600 mb-8">
-                Our admissions team is here to guide you through every step of the journey.
+              <p className="text-fuchsia-100 mb-12 text-lg leading-relaxed font-medium">
+                Our admissions team is here to guide you through every step of the journey. We are available Monday to Friday during school hours.
               </p>
               
-              <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4 w-full mt-auto">
                 <a 
                   href="tel:+233 54 975 3104"
-                  className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-100 bg-white py-4 font-bold text-slate-700 transition-colors hover:border-[#7e1b84] hover:text-[#7e1b84]"
+                  className="group flex-1 flex items-center justify-center gap-3 rounded-none border-2 border-white bg-white px-6 py-4 font-bold text-[#7e1b84] transition-colors hover:bg-transparent hover:text-white uppercase tracking-widest text-sm"
                 >
-                  <FaPhoneAlt /> Call Admissions
+                  <FaPhoneAlt /> Call Us
                 </a>
 
                 <a 
                   href="mailto:bwehschools@gmail.com"
-                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] shadow-lg shadow-purple-900/30 py-4 font-bold text-white transition-transform hover:-translate-y-1 hover:bg-[#6b1670]"
+                  className="group flex-1 flex items-center justify-center gap-3 rounded-none border-2 border-white bg-transparent px-6 py-4 font-bold text-white transition-colors hover:bg-white hover:text-[#7e1b84] uppercase tracking-widest text-sm"
                 >
-                  <FaEnvelope /> Email Admissions
+                  <FaEnvelope /> Email Us
                 </a>
               </div>
             </div>
 
           </div>
         </div>
-      </div>
+      </section>
 
     </main>
   );

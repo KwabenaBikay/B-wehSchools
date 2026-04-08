@@ -17,10 +17,12 @@ const NAV_LINKS = [
       { href: '/robotics', label: 'Robotics & AI Lab' },
     ]
   },
-  { href: '/staff', label: 'Our Staff' },
+  { href: '/staff', label: 'Our Team' },
   { href: '/admissions', label: 'Admissions' },
   { href: '/student-spotlight', label: 'Spotlight' }, 
   { href: '/gallery', label: 'Gallery' },
+  // I added the News/Blog link right here!
+  { href: '/blog', label: 'News' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -80,7 +82,7 @@ export default function Navbar() {
             <span className={`text-[10px] font-bold uppercase tracking-[0.2em] transition-colors duration-300 ${
               useLightMode ? 'text-white/90' : 'text-slate-500'
             }`}>
-              B-Weh Schools
+              B-weh Schools
             </span>
             <span className={`text-xl font-bold leading-none drop-shadow-md transition-colors duration-300 ${
               useLightMode ? 'text-white' : 'text-[#7e1b84]' 

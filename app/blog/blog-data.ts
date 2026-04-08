@@ -9,6 +9,7 @@ export const BLOG_POSTS = [
     category: 'Sports',
     image: '/images/blog/blog0.jpg',
     slug: 'sports-week',
+    images: ['/images/blog/blog0.jpg','/images/slide3.jpg'],
     content: `
       <p>The annual B-Weh Schools Sports Week has come to a thrilling conclusion! For five days, our campus was buzzing with energy as students competed in football, athletics, obstacle courses, and various track events.</p>
       <h3>Small but Mighty</h3>
@@ -55,7 +56,7 @@ export const BLOG_POSTS = [
     image: '/images/blog/traditional.jpg', 
     slug: 'african-day',
     content: `
-      <p>Our campus burst into a kaleidoscope of colors as facilitators and learners arrived dressed in traditional regalia representing various regions of Ghana and the wider African continent.</p>
+      <p> Our campus burst into a kaleidoscope of colors as facilitators and learners arrived dressed in traditional regalia representing various regions of Ghana and the wider African continent. </p>
       <h3>Unity in Diversity</h3>
       <p>The day was filled with drumming, traditional dancing, and the sharing of local dishes. By immersing themselves in their heritage, our learners developed a deeper appreciation for their roots.</p>
       <p>Events like these reinforce our core value of cultural pride alongside academic excellence.</p>

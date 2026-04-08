@@ -1,50 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // I am using export to create a static HTML site for cPanel
+  output: 'export',
+  
+  // I am adding trailingSlash so Next.js builds folders with index.html files, 
+  // which prevents those annoying cPanel 404 errors!
+  trailingSlash: true, 
+  
+  // I am turning off built-in image optimization because static HTML hosting 
+  // on cPanel doesn't support the Next.js image server.
   images: {
-    unoptimized: false,
-    remotePatterns: [],
-  },
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()'
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.youtube.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.resend.com https://*.upstash.io; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests;"
-          }
-        ],
-      },
-    ]
+    unoptimized: true,
   },
 };
 
+// I am using export default because my configuration file is an ES module (.mjs)
 export default nextConfig;

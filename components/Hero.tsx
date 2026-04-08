@@ -15,7 +15,7 @@ export default function Hero() {
             <span className="text-violet-700">excellence</span>.
           </h1>
           <p className="mt-4 text-sm text-neutral-700 sm:text-base">
-            B-Weh Schools Montessori offers a calm, high-standard learning
+            B-weh Schools Montessori offers a calm, high-standard learning
             environment where children build strong academic foundations,
             character, and confidence from their earliest years.
           </p>
