@@ -1,0 +1,45 @@
+# B-Weh Schools Montessori - Apache Web Server Security Configuration
+# Optimized for SecurityHeaders.com Grade A / A+
+
+# Enable Rewrite Engine & Force HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect HTTP to HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# HTTP Response Security Headers
+<IfModule mod_headers.c>
+    # 1. Content Security Policy (CSP) - Mitigates XSS and data injection attacks
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://maps.google.com https://www.google.com; connect-src 'self' https://formspree.io https:; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io; frame-ancestors 'self'; upgrade-insecure-requests;"
+
+    # 2. HTTP Strict Transport Security (HSTS) - Forces HTTPS connections
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # 3. X-Frame-Options - Protects against Clickjacking attacks
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # 4. X-Content-Type-Options - Prevents MIME-type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # 5. Referrer-Policy - Controls how much referrer information is included with requests
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # 6. Permissions-Policy - Restricts access to sensitive browser features/APIs
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), display-capture=()"
+
+    # 7. X-Permitted-Cross-Domain-Policies - Restricts Flash / PDF cross-domain access
+    Header always set X-Permitted-Cross-Domain-Policies "none"
+
+    # 8. Unset headers revealing server technology details
+    Header unset X-Powered-By
+    Header unset Server
+</IfModule>
+
+# Options Directive - Disable Directory Browsing
+Options -Indexes
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.html

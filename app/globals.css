@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
+html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body.nav-open {
+  overflow: hidden;
+  touch-action: none;
 }
 
 body {
@@ -12,6 +21,8 @@ body {
   padding: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 /* Typography helpers for premium serif + sans-serif pairing */

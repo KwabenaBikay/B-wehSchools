@@ -9,27 +9,29 @@ import { BLOG_POSTS } from './blog-data';
 
 export default function BlogIndexPage() {
   return (
-    <div className="min-h-screen bg-slate-50 pt-40 pb-20">
+    <div className="min-h-screen bg-slate-50 pt-28 pb-16 sm:pt-40 sm:pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
             School News & Insights
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Stay updated with the latest happenings, educational tips, and stories from B-Weh Montessori.
+            Stay updated with the latest happenings, educational tips, and stories from B-weh Montessori.
           </p>
         </div>
 
         {/* --- DYNAMIC SLIDING CARDS GRID --- */}
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {BLOG_POSTS.map((post) => (
+          {[...BLOG_POSTS]
+            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            .map((post) => (
             
             <Link 
               key={post.id || post.slug} 
               href={`/blog/${post.slug}`} 
-              className="group relative block h-[450px] w-full overflow-hidden bg-slate-200 border border-gray-200"
+              className="group relative block h-[380px] sm:h-[450px] w-full overflow-hidden bg-slate-200 border border-gray-200"
             >
               
               {/* 1. Background Image */}

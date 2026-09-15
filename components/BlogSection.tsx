@@ -1,39 +1,26 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight, FaCalendarAlt } from 'react-icons/fa';
 
-// I am importing all available posts
-import { BLOG_POSTS } from '@/app/blog/blog-data';
+import { BLOG_POSTS, HOME_NEWS_SLUGS } from '@/app/blog/blog-data';
+
+const latestPosts = HOME_NEWS_SLUGS
+  .map((slug) => BLOG_POSTS.find((post) => post.slug === slug))
+  .filter((post): post is (typeof BLOG_POSTS)[number] => Boolean(post));
 
 export default function BlogSection() {
-  // 1. My state to display posts
-  const [displayPosts, setDisplayPosts] = useState(BLOG_POSTS.slice(0, 3));
-  const [isMounted, setIsMounted] = useState(false);
-
-  // 2. My Shuffle Logic
-  useEffect(() => {
-    setIsMounted(true);
-    const allPosts = [...BLOG_POSTS];
-    for (let i = allPosts.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [allPosts[i], allPosts[j]] = [allPosts[j], allPosts[i]];
-    }
-    setDisplayPosts(allPosts.slice(0, 3));
-  }, []);
-
-  const featuredPost = displayPosts[0];
-  const sidePosts = displayPosts.slice(1, 3);
+  const featuredPost = latestPosts[0];
+  const sidePosts = latestPosts.slice(1, 3);
 
   return (
-    <section id="news" className="py-20 bg-white">
+    <section id="news" className="py-14 sm:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col">
         
         {/* --- MY HEADER --- */}
         <div className="mb-12">
-          <h3 className="text-3xl font-extrabold tracking-tight text-[#7e1b84] sm:text-4xl">
+          <h3 className="text-2xl font-extrabold tracking-tight text-[#7e1b84] sm:text-4xl">
             Latest School Insights & News
           </h3>
           <p className="mt-3 text-lg text-gray-600 max-w-3xl">
@@ -51,7 +38,7 @@ export default function BlogSection() {
                 {/* Removed rounded edges (rounded-none) */}
                 <article className="flex flex-col h-full rounded-none overflow-hidden bg-fuchsia-50 border border-fuchsia-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-fuchsia-200">
                   
-                  <div className="relative h-64 sm:h-80 w-full overflow-hidden">
+                  <div className="relative h-48 sm:h-64 md:h-80 w-full overflow-hidden">
                     <Image
                       src={featuredPost.image}
                       alt={featuredPost.title}
@@ -70,7 +57,7 @@ export default function BlogSection() {
                       <span>{featuredPost.date}</span>
                     </div>
 
-                    <h4 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-[#7e1b84] transition-colors">
+                    <h4 className="text-xl font-bold text-slate-900 mb-4 group-hover:text-[#7e1b84] transition-colors sm:text-2xl">
                       {featuredPost.title}
                     </h4>
                     <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3">
@@ -94,7 +81,7 @@ export default function BlogSection() {
                 <article className="flex flex-row items-stretch gap-4 rounded-none bg-fuchsia-50 p-3 border border-transparent hover:border-fuchsia-200 hover:shadow-lg transition-all duration-300 h-full">
                   
                   {/* Squared off the image container */}
-                  <div className="relative w-32 sm:w-40 flex-shrink-0 overflow-hidden rounded-none">
+                  <div className="relative w-24 min-h-[7.5rem] sm:w-40 sm:min-h-0 flex-shrink-0 overflow-hidden rounded-none">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -127,7 +114,7 @@ export default function BlogSection() {
           {/* Made the button flat to match the hero section */}
           <Link 
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-none bg-[#7e1b84] px-10 py-4 text-base font-bold text-white transition-all hover:bg-[#6b1670]"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-none bg-[#7e1b84] px-8 py-4 text-base font-bold text-white transition-all hover:bg-[#6b1670] sm:w-auto sm:px-10"
           >
             View All News <FaArrowRight />
           </Link>

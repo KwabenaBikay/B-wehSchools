@@ -50,6 +50,7 @@ Thumbs.db
 logs
 *.log
 
-# Temporary files
+# Temporary and archive files
 *.tmp
 *.temp
+*.zip

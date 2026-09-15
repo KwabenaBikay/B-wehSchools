@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Montserrat, Playfair_Display } from 'next/font/google';
 import Navbar from '@/components/Navbar';
@@ -15,6 +15,12 @@ const playfair = Playfair_Display({
   weight: ['500', '600', '700'],
   variable: '--font-serif',
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   title: 'B-Weh Schools Montessori',

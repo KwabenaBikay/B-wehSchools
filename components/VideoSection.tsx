@@ -9,11 +9,11 @@ export default function VideoSection({ youtubeUrl }: VideoSectionProps) {
   // Security: Validates that URL is from YouTube before processing
   const getEmbedUrl = (url: string) => {
     try {
-      const isValidYouTubeUrl = 
-        url.includes('youtube.com') || 
+      const isValidYouTubeUrl =
+        url.includes('youtube.com') ||
         url.includes('youtu.be') ||
         url.startsWith('https://www.youtube.com/embed/');
-      
+
       if (!isValidYouTubeUrl) {
         console.error('Invalid YouTube URL:', url);
         return '';
@@ -53,9 +53,9 @@ export default function VideoSection({ youtubeUrl }: VideoSectionProps) {
   const embedUrl = getEmbedUrl(youtubeUrl);
 
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white py-12 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* My Header Text */}
         <div className="mx-auto max-w-2xl text-center mb-12">
           <h2 className="text-3xl font-extrabold tracking-tight text-[#7e1b84] sm:text-4xl">
@@ -68,9 +68,9 @@ export default function VideoSection({ youtubeUrl }: VideoSectionProps) {
 
         {/* My Flat Video Container */}
         <div className="relative mx-auto w-full max-w-5xl">
-          
+
           {/* I completely removed the absolute decorative background blob here so there is no glowing shadow behind my video */}
-          
+
           {/* I stripped out rounded-3xl, shadow-2xl, and the border to make the video perfectly flat and normal */}
           <div className="relative aspect-video w-full overflow-hidden bg-black">
             <iframe

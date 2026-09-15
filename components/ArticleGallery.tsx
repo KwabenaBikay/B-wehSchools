@@ -24,7 +24,7 @@ export default function ArticleGallery({ images, title }: ArticleGalleryProps) {
 
   return (
     // I set this container to a light slate color so vertical/horizontal images have a nice backdrop
-    <div className="relative w-full h-full min-h-[350px] bg-slate-100 border border-gray-200 group flex items-center justify-center">
+    <div className="relative w-full h-full min-h-[260px] sm:min-h-[350px] bg-slate-100 border border-gray-200 group flex items-center justify-center">
       
       {/* object-contain ensures the image is NEVER cropped! */}
       <Image
@@ -40,7 +40,7 @@ export default function ArticleGallery({ images, title }: ArticleGalleryProps) {
         <>
           <button
             onClick={prevImage}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#7e1b84] text-white p-3 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#7e1b84] text-white p-3 transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100 focus:opacity-100"
             aria-label="Previous image"
           >
             <FaChevronLeft size={16} />
@@ -48,7 +48,7 @@ export default function ArticleGallery({ images, title }: ArticleGalleryProps) {
           
           <button
             onClick={nextImage}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#7e1b84] text-white p-3 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#7e1b84] text-white p-3 transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100 focus:opacity-100"
             aria-label="Next image"
           >
             <FaChevronRight size={16} />

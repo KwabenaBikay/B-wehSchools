@@ -76,7 +76,7 @@ export default function ContactPage() {
       {/* ==================== 
           1. HERO SECTION 
       ==================== */}
-      <section className="relative h-[450px] w-full flex flex-col items-center justify-center text-center px-4">
+      <section className="relative h-[380px] sm:h-[450px] w-full flex flex-col items-center justify-center text-center px-4">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -89,8 +89,8 @@ export default function ContactPage() {
         </div>
         
         {/* Content */}
-        <div className="relative z-10 text-white mb-20 max-w-3xl">
-          <h1 className="text-5xl font-black sm:text-6xl lg:text-7xl mb-4 uppercase tracking-tight drop-shadow-md">
+        <div className="relative z-10 text-white mb-16 sm:mb-20 max-w-3xl">
+          <h1 className="text-4xl font-black sm:text-6xl lg:text-7xl mb-4 uppercase tracking-tight drop-shadow-md">
             Contact Us
           </h1>
           <p className="text-purple-100 text-lg sm:text-xl font-medium max-w-2xl mx-auto drop-shadow-sm">
@@ -102,17 +102,17 @@ export default function ContactPage() {
       {/* ==================== 
           2. FLOATING CARD SECTION 
       ==================== */}
-      <section className="px-4 sm:px-6 lg:px-8 -mt-32 pb-20 relative z-20">
+      <section className="px-4 sm:px-6 lg:px-8 -mt-20 sm:-mt-32 pb-16 sm:pb-20 relative z-20">
         <div className="mx-auto max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
           
           {/* --- LEFT COLUMN: INFO --- */}
-          <div className="lg:w-2/5 bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] p-10 lg:p-14 text-white flex flex-col justify-between relative overflow-hidden">
+          <div className="lg:w-2/5 bg-gradient-to-br from-[#9c27b0] to-[#7e1b84] p-6 sm:p-10 lg:p-14 text-white flex flex-col justify-between relative overflow-hidden">
             
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
             <div className="absolute top-10 -left-10 w-40 h-40 bg-purple-500 opacity-20 rounded-full blur-3xl"></div>
 
             <div className="relative z-10">
-              <h2 className="text-4xl font-extrabold mb-4 tracking-tight">Let's Talk</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold mb-4 tracking-tight">Let's Talk</h2>
               <p className="text-fuchsia-100 font-medium mb-10 text-lg">
                 Visit our reception or send us a direct message. We respond within 24 hours.
               </p>
@@ -201,7 +201,7 @@ export default function ContactPage() {
           </div>
 
           {/* --- RIGHT COLUMN: FORM --- */}
-          <div className="lg:w-3/5 p-8 lg:p-14 bg-white flex flex-col justify-center">
+          <div className="lg:w-3/5 p-5 sm:p-8 lg:p-14 bg-white flex flex-col justify-center">
             <h2 className="text-3xl font-extrabold text-slate-900 mb-8 uppercase tracking-tight">Send a Message</h2>
             
             {/* Status Messages */}

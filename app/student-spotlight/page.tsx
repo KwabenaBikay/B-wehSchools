@@ -84,7 +84,7 @@ export default function StudentSpotlightPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20">
+    <div className="min-h-screen bg-white pt-28 pb-16 sm:pt-32 sm:pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* --- HEADER --- */}
@@ -92,7 +92,7 @@ export default function StudentSpotlightPage() {
           <h2 className="text-sm font-bold uppercase tracking-widest text-[#7e1b84] mb-4">
             Hall of Fame
           </h2>
-          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl uppercase">
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl uppercase">
             Student Spotlight
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-500 font-medium leading-relaxed">

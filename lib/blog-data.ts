@@ -15,7 +15,7 @@ export const BLOG_POSTS = [
     excerpt: 'AAs part of our commitment to nurturing creativity and holistic development, we hosted our maiden Art and Exhibition Day. The event provided a platform for our learners to showcase their impressive artworks and express their talents with confidence.',
     date: 'Nov 20, 2025',
     category: 'Art and Exhibition',
-    image: '/images/blog/blog1.jpg', 
+    image: '/images/blog/blog1.jpg',
     slug: 'art-and-exhibition'
   },
   {
@@ -24,7 +24,7 @@ export const BLOG_POSTS = [
     excerpt: 'We proudly participated in the 2025 Enjoy AI Africa Open, an international competition featuring contestants from across Africa. Our learners delivered outstanding performances and returned home with two remarkable trophies.',
     date: 'Nov 15, 2025',
     category: 'Robotics & AI',
-    image: '/images/blog/blog10.jpg', 
+    image: '/images/blog/blog10.jpg',
     slug: 'robotics-and-ai'
   },
 ];

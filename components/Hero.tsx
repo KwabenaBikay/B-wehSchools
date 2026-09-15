@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="relative rounded-3xl border border-neutral-100 bg-white shadow-lg">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
               <Image
-                src="/images/hero-classroom.jpg"
+                src="/images/slide.jpg"
                 alt="Happy B-Weh Montessori pupils in a vibrant classroom"
                 fill
                 className="object-cover"

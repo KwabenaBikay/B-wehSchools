@@ -5,9 +5,6 @@ export type GalleryItem = {
   caption: string;
 };
 
-// This is our magic "Smart Generator" function!
-// Instead of writing 10 lines of code, we just tell it: 
-// "Make images 1 through 10, call them 'Sports', and put them in 'Extracurricular'"
 const generateImages = (
   startId: number,
   endId: number,
@@ -26,12 +23,11 @@ const generateImages = (
   return items;
 };
 
-// Now we build the entire 70-image array in just a few clean lines!
 export const GALLERY_ITEMS: GalleryItem[] = [
   ...generateImages(1, 2, 'Extracurricular', 'Sports Day 2025'),
   ...generateImages(3, 4, 'Excursion', 'A visit to Accra Zoo'),
-  ...generateImages(5, 5, 'Extracurricular', 'Sports Day 2026'), // single image
-  ...generateImages(6, 6, 'Excursion', 'A visit to Accra Zoo'), // fixed spelling
+  ...generateImages(5, 5, 'Extracurricular', 'Sports Day 2026'),
+  ...generateImages(6, 6, 'Excursion', 'A visit to Accra Zoo'),
   ...generateImages(7, 8, 'Extracurricular', 'Sports Day 2026'),
   ...generateImages(9, 15, 'Extracurricular', 'Sports Day 2025'),
   ...generateImages(16, 18, 'Academics', 'Nature & Plant Care'),

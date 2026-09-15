@@ -28,7 +28,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const galleryImages = article.images && article.images.length > 0 ? article.images : [article.image];
 
   return (
-    <main className="bg-white min-h-screen pb-20 pt-32">
+    <main className="bg-white min-h-screen pb-16 pt-28 sm:pb-20 sm:pt-32">
       <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* My Professional Article Header */}
@@ -51,7 +51,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* LEFT COLUMN: The Interactive Gallery (Spans 5 columns) */}
-          <div className="lg:col-span-5 relative w-full lg:sticky lg:top-32 lg:h-[450px]">
+          <div className="lg:col-span-5 relative w-full h-[280px] sm:h-[350px] lg:sticky lg:top-32 lg:h-[450px]">
             {/* The slider sits securely in this column! */}
             <ArticleGallery images={galleryImages} title={article.title} />
           </div>
@@ -59,7 +59,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           {/* RIGHT COLUMN: The Content (Spans 7 columns) */}
           <div className="lg:col-span-7">
             <div 
-              className="text-lg text-slate-800 leading-relaxed [&>p]:mb-6 [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:text-slate-900 [&>h3]:mt-10 [&>h3]:mb-4"
+              className="text-base sm:text-lg text-slate-800 leading-relaxed [&>p]:mb-6 [&>h3]:text-xl sm:[&>h3]:text-2xl [&>h3]:font-bold [&>h3]:text-slate-900 [&>h3]:mt-8 [&>h3]:mb-4"
               dangerouslySetInnerHTML={{ __html: article.content || article.excerpt }}
             />
 

@@ -8,7 +8,7 @@ const TESTIMONIALS = [
     id: 1,
     name: "Mrs. Jennifer Opare",
     role: "Parent, Nursery 1",
-    image: "/images/testi/p1.jpg", 
+    image: "/images/testi/p1.jpg",
     text: "The transformation in my son's confidence since joining B-Weh has been remarkable. The personalized attention he gets in the Montessori system is exactly what he needed.",
     rating: 5,
   },
@@ -32,20 +32,20 @@ const TESTIMONIALS = [
 
 export default function TestimonialSection() {
   return (
-    <section className="relative py-24 bg-slate-900 overflow-hidden border-y border-slate-800">
-      
+    <section className="relative py-14 sm:py-24 bg-slate-900 overflow-hidden border-y border-slate-800">
+
       {/* --- SUBTLE BRAND GLOW (Very faint, cinematic lighting) --- */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[500px] bg-[#7e1b84]/20 blur-[120px] pointer-events-none"></div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* --- HEADER (Updated for Dark Background) --- */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-sm font-bold uppercase tracking-widest text-fuchsia-400 mb-4">
               Parent Stories
             </h2>
-            <h3 className="text-4xl font-extrabold text-white uppercase tracking-tight sm:text-5xl">
+            <h3 className="text-3xl font-extrabold text-white uppercase tracking-tight sm:text-5xl">
               Trusted by Families
             </h3>
           </div>
@@ -57,11 +57,11 @@ export default function TestimonialSection() {
         {/* --- GRID (Bright White Cards that pop against the dark background) --- */}
         <div className="grid gap-6 md:grid-cols-3">
           {TESTIMONIALS.map((t) => (
-            <div 
-              key={t.id} 
-              className="group relative bg-white p-8 md:p-10 flex flex-col justify-between transition-colors duration-500 hover:bg-[#7e1b84] shadow-2xl"
+            <div
+              key={t.id}
+              className="group relative bg-white p-6 sm:p-8 md:p-10 flex flex-col justify-between transition-colors duration-500 hover:bg-[#7e1b84] shadow-2xl"
             >
-              
+
               {/* Massive Decorative Quote Mark */}
               <div className="absolute top-6 right-6 text-7xl font-serif font-black text-slate-100 leading-none group-hover:text-fuchsia-400/20 transition-colors pointer-events-none select-none">
                 "
@@ -77,14 +77,14 @@ export default function TestimonialSection() {
                 </div>
 
                 {/* Text */}
-                <p className="text-slate-700 text-lg font-medium leading-relaxed mb-10 group-hover:text-white transition-colors">
+                <p className="text-slate-700 text-base sm:text-lg font-medium leading-relaxed mb-8 sm:mb-10 group-hover:text-white transition-colors">
                   {t.text}
                 </p>
               </div>
 
               {/* User Info & Footer */}
               <div className="relative z-10 flex items-center gap-5 mt-auto pt-6 border-t border-slate-100 group-hover:border-white/20 transition-colors">
-                
+
                 {/* Square Image Avatar */}
                 <div className="relative h-14 w-14 flex-shrink-0 overflow-hidden bg-slate-200 grayscale group-hover:grayscale-0 transition-all duration-500">
                   <Image
@@ -95,7 +95,7 @@ export default function TestimonialSection() {
                     unoptimized={true}
                   />
                 </div>
-                
+
                 {/* Author Name */}
                 <div>
                   <h4 className="text-base font-bold text-slate-900 uppercase tracking-wider group-hover:text-white transition-colors">

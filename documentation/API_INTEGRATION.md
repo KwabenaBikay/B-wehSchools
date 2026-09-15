@@ -1,13 +1,13 @@
 # API Integration Guide
-## B-Weh Schools Website → Bwexus Platform
+## B-weh Schools Website → Bwexus Platform
 
-This document describes the API integration layer for connecting the B-Weh Schools website with the future Bwexus unified platform.
+This document describes the API integration layer for connecting the B-weh Schools website with the future Bwexus unified platform.
 
 ---
 
 ## Overview
 
-The B-Weh Schools website includes an API integration layer (`lib/bwexus-api.ts`) that will connect with the Bwexus platform when it's ready. This allows contact form submissions and other data to be synchronized with the unified platform.
+The B-weh Schools website includes an API integration layer (`lib/bwexus-api.ts`) that will connect with the Bwexus platform when it's ready. This allows contact form submissions and other data to be synchronized with the unified platform.
 
 ---
 
